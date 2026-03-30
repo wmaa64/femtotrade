@@ -24,7 +24,60 @@ const getOrdersByDate = async (date) => {
 //-----------
 
 // create a new Order
-const createOrder =  async (data) => {
+const createOrder = async (data) => {
+  try {
+    const { email, mobile, items } = data;
+
+    // ✅ Validate input
+    if (!email || !mobile || !items || items.length === 0) {
+      throw new Error("Missing order data");
+    }
+
+    // 🧩 Build order items
+    const orderItems = items.map((item) => ({
+      productId: item._id,
+      name: {
+        en: item.name?.en || item.name,
+        ar: item.name?.ar || "",
+      },
+      price: item.price,
+      quantity: item.quantity,
+      image: item.image,
+      selectedCategories: item.selectedCategories || [],
+      displayName: item.displayName || item.name?.en || "",
+    }));
+
+    // 🧩 Calculate total price
+    const totalPrice = items.reduce(
+      (sum, item) => sum + item.price * item.quantity,
+      0
+    ) +50 ; // Add shipping cost
+
+    // 🧾 Create order
+    const newOrder = new Order({
+      email,
+      mobile,
+      items: orderItems,
+      totalPrice,
+      paymentStatus: "pending",   // no Stripe
+      orderStatus: "Pending",
+    });
+
+    const saved = await newOrder.save();
+
+    console.log("✅ Mongo saved:", saved._id);
+
+    // ✅ RETURN ONLY _id (important)
+    return saved;
+
+  } catch (error) {
+    console.error("❌ createOrder error:", error);
+    throw error;
+  }
+};
+
+
+const oldcreateOrder =  async (data) => {
     try{
       const { paymentIntentId, email, mobile, items } = data;
       

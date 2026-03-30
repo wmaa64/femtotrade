@@ -12,10 +12,12 @@ import toast from "react-hot-toast";
 
 const Cart = () => {
     const cartRef = useRef();
-    const {totalPrice,totalQuantities,cartItems,setShowCart,toggleCartItemQuantity,onRemove,} = useStateContext();
+    const {totalPrice,totalQuantities,cartItems,setShowCart,
+        setCartItems,setTotalPrice, setTotalQuantities, onRemove,} = useStateContext();
 
     const [email, setEmail] = useState("");
     const [mobile, setMobile] = useState("");
+    
     const [isValid, setIsValid] = useState(false);
     const [loading, setLoading] = useState(false);    
 
@@ -37,7 +39,54 @@ const Cart = () => {
         setMobile(newMobile);
         validateInputs(email, newMobile);
     };
-    
+
+    const handleCheckout = async () => {
+        if (!isValid) {
+            toast.error("Please enter a valid email and phone number.");
+            return;
+        }
+
+        try {
+            setLoading(true);
+
+            const response = await fetch("/api/orders", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                items: cartItems,
+                email,
+                mobile,
+            }),
+            });
+
+            const data = await response.json();
+
+            if (!response.ok) {
+            throw new Error(data.message || "Failed to save order");
+            }
+
+
+            // ✅ Save order ID to state
+            alert(response.ok ? `Your Order ${data._id.toString()} is saved successfully! Please Remember it`
+                        : "Failed to save order");
+            //toast.success(`Your Order ${data._id.toString()} is saved successfully!`);
+
+            // Clear cart and run animation
+            setCartItems([]);
+            setTotalPrice(0);
+            setTotalQuantities(0);
+
+        } catch (err) {
+            console.error(err);
+            toast.error("Failed to save order");
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    /*
     const handleCheckout = async () => {
         if (!isValid) {
             toast.error("Please enter a valid email and 11-digit phone number.");
@@ -82,6 +131,7 @@ const Cart = () => {
         setLoading(false);
         }
     };
+*/
 
 return (
     <div className="cart-wrapper" ref={cartRef}>
@@ -143,17 +193,17 @@ return (
                     </div>
                     
                     <div className="total">
-                        <h3>Subtotal:</h3>
-                        <h3>جنيه{eUSLocale(totalPrice)}</h3>
+                        <h3>Subtotal including 50 EGP for Shipping:</h3>
+                        <h3>جنيه{eUSLocale(totalPrice + 50)}</h3>
                     </div>
                     
                     <div className="btn-container">
-                        <button type="button" className="btn" onClick={handleCheckout} bisabled={!isValid || !loading} 
+                        <button type="button" className="btn" onClick={handleCheckout} disabled={!isValid || loading} 
                             style={{
                             opacity: !isValid || loading ? 0.5 : 1,
                             cursor: !isValid || loading ? "not-allowed" : "pointer",
                             }}>
-                            {loading ? "Processing..." : "Pay with Stripe"}
+                            {loading ? "Processing..." : "Save Order"}
                         </button>
                     </div>
                 </div>

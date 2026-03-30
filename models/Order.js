@@ -36,7 +36,6 @@ const orderSchema = new mongoose.Schema({
   totalPrice: { type: Number, required: true },
   paymentStatus: { type: String, default: "paid" },
   orderStatus: { type: String, default: "Pending" },
-  paymentIntentId: { type: String, required: true },
   createdAt: { type: Date, default: Date.now },
 });
 

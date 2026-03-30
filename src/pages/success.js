@@ -83,14 +83,7 @@ const Success = () => {
           console.error("❌ createOrder error:", error);
           res.status(500).json({ message: "Error saving order", error: error.message });
       }
-        /*
-        if (!response.ok) {
-          console.error("Failed to save order");
-        } else {
-          console.log("Order saved successfully");
-        }
-          */
-
+  
       } catch (error) {
         console.error("Error saving order:", error);
       }
