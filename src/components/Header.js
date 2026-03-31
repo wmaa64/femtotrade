@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import Flag from 'react-world-flags';
 import { MdEmail } from "react-icons/md";
 import { useStateContext } from "../../context/StateContext";
+import { AiFillInstagram, AiOutlineTwitter, AiFillFacebook, AiOutlineWhatsApp } from "react-icons/ai";
 import i18n from '../i18n';
 import Link from "next/link";
 import Image from 'next/image';
@@ -65,7 +66,7 @@ const Header = () => {
 
       {/* Center: logo */}
       <div className='centerStyle'>
-        {/* Using /public/images/MunchixLogo.jpeg -> ensure file exists at public/images/... */}
+        {/* Using /public/images/FemtotradeLogo.jpeg -> ensure file exists at public/images/... */}
         <Link href="/" title="Go to Home" style={{ display: 'inline-block' }}>
           <Image
             src="/images/femtotradelogo.jpg"
@@ -100,6 +101,22 @@ const Header = () => {
             /* you can replace with login/signup links/buttons if needed */
             <div style={{ fontSize: 14, opacity: 0.9 }}>Guest</div>
           )}
+
+          <div >
+              <a href="https://www.instagram.com/femtotradepets" target="_blank" rel="noopener noreferrer">
+                  <AiFillInstagram   size={30} color="#E1306C" /> {/* Instagram */}
+              </a>
+              <a href="https://twitter.com/femtotradepets" target="_blank" rel="noopener noreferrer">
+                  <AiOutlineTwitter  size={30} color="#1DA1F2" /> {/* Twitter */}
+              </a>
+              <a href="https://www.facebook.com/femtotradepets" target="_blank" rel="noopener noreferrer">
+                  <AiFillFacebook    size={30} color="#1877F2" /> {/* Facebook */}
+              </a>
+              <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer">
+                  <AiOutlineWhatsApp size={30} color="#25D366" /> {/* WhatsApp */}
+              </a>
+          </div>
+
 
         </div>
       </div>
