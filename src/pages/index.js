@@ -5,13 +5,14 @@ import Newsletter from "../components/Newsletter";
 import { NextSeo } from "next-seo";
 import ImageCarousel from '../components/ImageCarousel';
 import Product from "../components/Product"; // adjust path if needed
+import Styles from "../styles/index.module.css";
 
 const Home = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
 
   const images = [
-    '/images/image1u.jpg',
+    '/images/image1.jpeg',
     '/images/image2.jpeg',
     '/images/image3.jpeg',
     '/images/image4.jpeg',
@@ -42,13 +43,31 @@ const Home = () => {
 
 return (
 <>
-  {/*<NextSeo
-    title="Macaron Magic"
-    description="Great tasting home made macarons"
-  />*/}
+  <NextSeo
+    title="Pets Suppliers | Cat's Best | Femtotrade"
+    description="Pet Suppliers in Egypt - Cat's Best - Original litter - Active against urine and odours - 100% natural - 100% biodegradable - Dust-free - Long-lasting - Odour control - Easy to clean "
+  />
 
-  <div style={{ marginTop: "10px", }}>
-    <ImageCarousel images={images} interval={5000} />
+  <div style={{marginTop: "10px", }}>
+    <div>
+        <ImageCarousel images={images} interval={5000} />
+    </div>
+    <div className="perfect-message">
+        <p>Perfect for </p>
+        <p>Cats, Dogs & Small Animals</p>
+        <p>
+            Cat's Best - Organic Litter - Smart Pellets - Prevent Tracking
+            Organic Litter - Original - active against urine and odours
+            Sensitive - Naturally Anti-bacterial
+            The Power of Nature - Confort - Non Clumping & High ABsorption
+            Universal - Non Clumping & High ABsorption
+            
+            Dog's Best - 100% natural organic fibres - 
+            the ideal supplement to taking dog out to "do its business - 
+            Dog freindly confort round the clock - super absorbent - 
+            stops odeur - 100% biodegradable compostable.
+        </p>
+    </div>
   </div>
 
   <div>
