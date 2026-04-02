@@ -1,16 +1,15 @@
 import React, {useState, useEffect} from "react";
-import Link from "next/link";
-import PerfectBanner from "../components/PerfectBanner";
-import Newsletter from "../components/Newsletter";
 import { NextSeo } from "next-seo";
 import ImageCarousel from '../components/ImageCarousel';
-import Product from "../components/Product"; // adjust path if needed
+import Product from '../components/Product';
+import i18n from '../i18n';
 import Styles from "../styles/index.module.css";
 
 const Home = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
-
+  const [language, setLanguage] = useState('en');
+  
   const images = [
     '/images/image1.jpeg',
     '/images/image2.jpeg',
@@ -41,6 +40,12 @@ const Home = () => {
     fetchProducts();
   }, []);
 
+    useEffect(() => {
+    if (i18n?.language) {
+      setLanguage(i18n.language);
+    }
+  }, [i18n]);
+
 return (
 <>
   <NextSeo
@@ -48,11 +53,11 @@ return (
     description="Pet Suppliers in Egypt - Cat's Best - Original litter - Active against urine and odours - 100% natural - 100% biodegradable - Dust-free - Long-lasting - Odour control - Easy to clean "
   />
 
-  <div style={{marginTop: "10px", }}>
-    <div>
+  <div className={Styles.section_container} >
+    <div className={Styles.carousel_box}>
         <ImageCarousel images={images} interval={5000} />
     </div>
-    <div className="perfect-message">
+    <div className={Styles.perfect_message}>
         <p>Perfect for </p>
         <p>Cats, Dogs & Small Animals</p>
         <p>

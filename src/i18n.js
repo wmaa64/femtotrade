@@ -12,7 +12,7 @@ const resources = {
         "featuredProducts": "Featured Products",
         "chooseSubCategories": "Choose SubCategories, Then Press Search...",
         //Homepage
-        "appName": "Buffallo Burger Restaurant",
+        "appName": "Femtotrade",
         "searchButton": "Search",
         "searchBoxLabel": "Search Products",
         "newProducts": "New Products",
@@ -31,7 +31,7 @@ const resources = {
         "featuredProducts": "منتجات مميزة",
         "chooseSubCategories": "اختر الفئات الفرعية، ثم اضغط على البحث...",
         //Homepage
-        "appName": "مطعم اللحم البقري",
+        "appName": "فيمتوتريد لمستلزمات الحيوانات الاليفة",
         "searchButton": "بحث",
         "searchBoxLabel": "البحث عن منتجات",
         "newProducts": "منتجات جديدة",

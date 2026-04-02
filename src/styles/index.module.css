@@ -1,19 +1,50 @@
-.container {
+.section_container {
   display: flex;
-  align-items: center;   /* vertically align */
-  justify-content: space-between;
+  align-items:normal ; /* makes both same height */
+  gap: 15px;
+  margin-top: 10px;
 }
 
-.carousel {
+/* LEFT: Carousel */
+.carousel_box {
+  flex: 1.5 ;              /* bigger than text */
+}
+
+.carousel_box img {
   width: 100%;
   height: 100%;
-  position: relative;
-  overflow: hidden;
+  object-fit: contain;
 }
 
-.text {
+/* RIGHT: Text */
+.perfect_message {
+  flex: 1;              /* smaller than carousel */
   background-color: #959e92ff;
-  width: 100%;
-  height: 100%;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   text-align: center;
+}
+
+
+.perfect_message > p:nth-child(1) {
+  font-weight: 300;
+  font-size: 21px;
+  letter-spacing: 1px;
+  line-height: 23px;
+  padding-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.perfect_message > p:nth-child(2) {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+.perfect_message > p:nth-child(3) {
+  padding-top: 30px;
+  text-align: justify;
 }
