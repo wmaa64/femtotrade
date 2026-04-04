@@ -112,7 +112,7 @@ const Header = () => {
               <a href="https://www.facebook.com/femtotradepets" target="_blank" rel="noopener noreferrer">
                   <AiFillFacebook    size={30} color="#1877F2" /> {/* Facebook */}
               </a>
-              <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/201554445110?text=I%20just%20placed%20an%20order" target="_blank" rel="noopener noreferrer">
                   <AiOutlineWhatsApp size={30} color="#25D366" /> {/* WhatsApp */}
               </a>
           </div>
