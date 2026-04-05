@@ -15,29 +15,45 @@ const Cart = () => {
     const {totalPrice,totalQuantities,cartItems,setShowCart,
         setCartItems,setTotalPrice, setTotalQuantities, onRemove,} = useStateContext();
 
-    const [email, setEmail] = useState("");
+    const [name, setName] = useState("");
     const [mobile, setMobile] = useState("");
+    const [address, setAddress] = useState("");              
+    const [email, setEmail] = useState("");
     
     const [isValid, setIsValid] = useState(false);
     const [loading, setLoading] = useState(false);    
 
-    // ✅ Validate inputs dynamically
-    const validateInputs = (email, mobile) => {
-        const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-        const mobileValid = /^\d{11}$/.test(mobile);
-        setIsValid(emailValid && mobileValid);
-    };
+    useEffect(() => {
+        const cleanMobile = normalizeNumber(mobile).replace(/\s/g, '');
 
-    const handleEmailChange = (e) => {
-        const newEmail = e.target.value;
-        setEmail(newEmail);
-        validateInputs(newEmail, mobile);
+        const nameValid = name.trim().length > 0;
+        const addressValid = address.trim().length > 0;
+        const mobileValid = /^\d{11}$/.test(cleanMobile);
+
+        setIsValid(nameValid && addressValid && mobileValid);
+    }, [name, mobile, address]);
+
+
+    const handleNameChange = (e) => {
+        setName(e.target.value);
     };
 
     const handleMobileChange = (e) => {
-        const newMobile = e.target.value;
-        setMobile(newMobile);
-        validateInputs(email, newMobile);
+        const normalized = normalizeNumber(e.target.value);
+        setMobile(normalized);
+    };
+
+    const handleAddressChange = (e) => {
+        setAddress(e.target.value);
+    };
+
+    const handleEmailChange = (e) => {
+        setEmail(e.target.value);
+    };
+
+    const normalizeNumber = (value) => {
+        return value
+            .replace(/[٠-٩]/g, d => "٠١٢٣٤٥٦٧٨٩".indexOf(d)) // Arabic
     };
 
     const handleCheckout = async () => {
@@ -58,6 +74,8 @@ const Cart = () => {
                 items: cartItems,
                 email,
                 mobile,
+                name,
+                address,
             }),
             });
 
@@ -86,52 +104,6 @@ const Cart = () => {
         }
     };
 
-    /*
-    const handleCheckout = async () => {
-        if (!isValid) {
-            toast.error("Please enter a valid email and 11-digit phone number.");
-            return;
-        }
-
-        try{
-            const stripe = await getStripe();
-            setLoading(true);
-
-            localStorage.setItem("cartBackup", JSON.stringify(cartItems));
-            
-            const response = await fetch("/api/stripe/stripe", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify({ 
-                    // send your cart and customer info
-                    items: cartItems,
-                    email,  // you can replace with dynamic email
-                    mobile, // same here
-                    }),
-            });
-
-            if (!response.ok) {
-                const error = await response.json();
-                console.error("Stripe API error:", error); // 👈 add this
-                throw new Error(error.message || "Checkout failed");
-            }
-
-            const data = await response.json();
-            toast.loading("Redirecting to payment...");
-
-            // ✅ open the Stripe Checkout page directly
-            window.location.href = data.url;
-
-        } catch (err) {
-        console.error(err);
-        toast.error("Checkout failed");
-        } finally {
-        setLoading(false);
-        }
-    };
-*/
 
 return (
     <div className="cart-wrapper" ref={cartRef}>
@@ -182,13 +154,24 @@ return (
             {cartItems.length >= 1 && (
                 <div className="cart-bottom">
                      <div className="customer-info">
-                        <label>Enter Valid Email:</label>
-                        <input  className="input-field" type="email"  placeholder="Enter your email"         value={email}   required
-                            onChange={handleEmailChange} 
+                        <label>Enter Name:</label>
+                        <input  className="input-field" type="text"  placeholder="Enter your name"         value={name}   required
+                            onChange={handleNameChange} 
                         />
+
                         <label>Enter Phone Number (11 digits):</label>
-                        <input  className="input-field" type="tel"    placeholder="Enter your phone number"  value={mobile}  required
-                            onChange={handleMobileChange}
+                        <input type="tel"  inputMode="numeric"  className="input-field"  placeholder="01XXXXXXXXX"
+                            value={mobile}    onChange={handleMobileChange}
+                        />
+                        
+                        <label>Enter Address:</label>
+                        <input  className="input-field" type="text"    placeholder="Enter your address"  value={address}  required
+                            onChange={handleAddressChange}
+                        />
+
+                        <label>Enter Valid Email:</label>
+                        <input  className="input-field" type="email"  placeholder="Enter your email"   value={email}   
+                            onChange={handleEmailChange} 
                         />
                     </div>
                     
@@ -203,7 +186,7 @@ return (
                             opacity: !isValid || loading ? 0.5 : 1,
                             cursor: !isValid || loading ? "not-allowed" : "pointer",
                             }}>
-                            {loading ? "Processing..." : "Save Order"}
+                            {loading ? "Processing..." : "Place Order"}
                         </button>
                     </div>
                 </div>
