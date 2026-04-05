@@ -159,17 +159,17 @@ return (
                             onChange={handleNameChange} 
                         />
 
-                        <label>Enter Phone Number (11 digits):</label>
+                        <label style={{color: "black"}}>Enter Phone Number (11 digits):</label>
                         <input type="tel"  inputMode="numeric"  className="input-field"  placeholder="01XXXXXXXXX"
                             value={mobile}    onChange={handleMobileChange}
                         />
                         
-                        <label>Enter Address:</label>
+                        <label style={{color: "black"}}>Enter Address:</label>
                         <input  className="input-field" type="text"    placeholder="Enter your address"  value={address}  required
                             onChange={handleAddressChange}
                         />
 
-                        <label>Enter Valid Email:</label>
+                        <label style={{color: "black"}}>Enter Valid Email:</label>
                         <input  className="input-field" type="email"  placeholder="Enter your email"   value={email}   
                             onChange={handleEmailChange} 
                         />
