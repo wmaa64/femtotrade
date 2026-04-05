@@ -144,14 +144,16 @@ const ManageOrders = () => {
                             <strong>{(item.selectedCategories.length > 0) ? item.displayName : ""}  </strong>
                           </p>
                           <p style={{ margin: 0 }}>
-                            Qty: {item.quantity} × {item.price} ` + (50EGP For Shipping)` EGP ={" "}
-                            {item.quantity * item.price +(50)} EGP
+                            Qty: {item.quantity} × {item.price} EGP = {item.quantity * item.price +(50)} EGP
                           </p>
                         </div>
                       </div>
                     </li>
                   ))}
                 </ul>
+                <p style={{ margin: 0 }}>
+                    Total: {order.totalPrice} EGP (including 50 EGP delivery fee)
+                </p>
               </div>
             </div>
           ))}
