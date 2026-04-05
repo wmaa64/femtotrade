@@ -1780,3 +1780,9 @@ table.additional-info > tbody > tr > th {
 .phone-number:hover {
   text-decoration: underline;
 }
+
+/*  ---------------------------------------- */
+.input-field {
+  font-size: 18px; /* or 16px minimum for iPhone */
+  /* padding: 12px;   /* makes it look bigger and easier to tap */
+}
