@@ -154,7 +154,7 @@ return (
             {cartItems.length >= 1 && (
                 <div className="cart-bottom">
                      <div className="customer-info">
-                        <label>Enter Name:</label>
+                        <label style={{color: "black"}}>Enter Name:</label>
                         <input  className="input-field" type="text"  placeholder="Enter your name"         value={name}   required
                             onChange={handleNameChange} 
                         />
