@@ -144,7 +144,7 @@ const ManageOrders = () => {
                             <strong>{(item.selectedCategories.length > 0) ? item.displayName : ""}  </strong>
                           </p>
                           <p style={{ margin: 0 }}>
-                            Qty: {item.quantity} × {item.price} EGP = {item.quantity * item.price +(50)} EGP
+                            Qty: {item.quantity} × {item.price} EGP = {item.quantity * item.price} EGP
                           </p>
                         </div>
                       </div>
