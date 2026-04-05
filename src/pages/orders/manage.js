@@ -86,8 +86,11 @@ const ManageOrders = () => {
             >
               <h3>📦 Order #{order._id.slice(-6)}</h3>
               <p>
-                <strong>Email:</strong> {order.email} <br />
+                <strong>Name:</strong> {order.name} <br />
                 <strong>Mobile:</strong> {order.mobile} <br />
+                <strong>Address:</strong> {order.address} <br />
+                <strong>Email:</strong> {order.email} <br />
+                
                 <strong>Date:</strong>{" "}
                 {new Date(order.createdAt).toLocaleString()} <br />
                 <strong>Total:</strong> {order.totalPrice} EGP <br />
