@@ -48,7 +48,6 @@ const Header = () => {
           onClick={toggleLanguage}
           aria-label="Toggle language"
           title={language === 'en' ? 'Switch to Arabic' : 'Switch to English'}
-
         >
           {language === 'en' ? (
             <>
@@ -71,8 +70,8 @@ const Header = () => {
           <Image
             src="/images/femtotradelogo.jpg"
             alt="FemtoTrade Logo"
-            width={400}
-            height={100}
+            width= {300}
+            height={75}
           />
         </Link>
       </div>
