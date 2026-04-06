@@ -183,7 +183,7 @@ a {
   color: blue;
 }
 
-.navbar-container>div>p {
+.navbar-container>div p {
   font-size: 48px;
   font-weight: 600;
 }
@@ -1959,7 +1959,7 @@ table.additional-info>tbody>tr>th {
 }
 
 
-.navbar-container>div>p {
+.navbar-container>div p {
   font-size: 32px;
   font-weight: 600;
 }
