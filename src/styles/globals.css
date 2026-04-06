@@ -180,7 +180,7 @@ a {
 .navbar-container>div {
   display: flex;
   justify-content: center;
-  font-size:x-large;
+  font-size: 48px;
   font-weight: 600;
   color: blue;
 }
