@@ -1708,36 +1708,26 @@ table.additional-info > tbody > tr > th {
 }
 
 /* HEADER COMPONENT ---------------------------------------- */
+/* For Mobile Header*/
+  .headerContainerStyle  {
+      background-color: #000000;
+      color: #fff;
+      padding: 8px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+  }
 
-.headerContainerStyle  {
-    background-color: #000000;
-    color: #fff;
-    padding: 8px 16px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.leftStyle  { 
-    display: flex;
-    align-items: center;
-    gap: 10px 
-}
-  
-  /*.centerStyle  { justify-content:left; text-align: center; flex: 0 0 auto }*/
-.centerStyle {
-  display: flex;               /* use flexbox for centering */
-  justify-content: center;     /* center horizontally */
-  align-items: center;         /* center vertically (optional) */
-  text-align: center;
-  flex: 0 0 auto;
-  margin-left: 15%;
-}
+  .leftStyle  { 
+      display: flex;
+      align-items: center;
+      gap: 10px 
+  }
 
   .logoimageWrapper {
     position: relative;
-    width: 200px;   /* control width */
-    height: 75px;   /* control height */
+    width: 250px;   /* control width */
+    height: 100px;   /* control height */
   }
 
   .rightStyle  { 
@@ -1767,13 +1757,13 @@ table.additional-info > tbody > tr > th {
 }
 
 .phone-icon {
-  font-size: 30px;
+  font-size: 26px;
 }
 
 .phone-number {
   color: #fff;
   text-decoration: none;
-  font-size: 30px;
+  font-size: 26px;
 }
 
 .phone-number:hover {
