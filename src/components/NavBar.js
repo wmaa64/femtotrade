@@ -30,18 +30,18 @@ return (
             )}
 
             {userInfo ? (
-                <button onClick={logoutUser} style={{ color: "red" , border: "none", background: "transparent", cursor: "pointer" }}>
+                <button onClick={logoutUser} >
                     Logout
                 </button>
             ) : (
                 <>
                     <Link href="/users/login">
-                        <button style={{ color: "red", border: "none", background: "transparent", cursor: "pointer" }}>
+                        <button >
                             Login
                         </button>
                     </Link>
                     <Link href="/users/register">
-                        <button style={{color: "red", border: "none", background: "transparent", cursor: "pointer" }}>
+                        <button >
                             Register
                         </button>
 

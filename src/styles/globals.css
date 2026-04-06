@@ -214,6 +214,18 @@ a {
   gap: 12px;
   color: white;
   flex-wrap: wrap;   /* 🔥 THIS FIXES OVERFLOW */
+  font-size: 36px;
+  font-weight: 600;
+  padding-left: 30px;
+}
+
+.navitems button {
+  color: red ;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 22px;
+  font-weight: 600;
 }
 
 .navbar a {
