@@ -29,7 +29,7 @@ return (
                 </>
             )}
 
-            {/*userInfo ? (
+            {userInfo ? (
                 <button onClick={logoutUser} style={{ color: "red" , border: "none", background: "transparent", cursor: "pointer" }}>
                     Logout
                 </button>
@@ -47,13 +47,13 @@ return (
 
                     </Link>
                 </>
-            )*/}
+            )}
             
-            {/*<button  type="button"   className="cart-icon"  onClick={() => setShowCart(true)}>
+            <button  type="button"   className="cart-icon"  onClick={() => setShowCart(true)}>
                 <AiOutlineShopping />
                 <span className="cart-item-qty">{totalQuantities}</span>
-            </button>*/}
-            {/*showCart && <Cart />}*/}
+            </button>
+            {showCart && <Cart />}
         </div>
     </nav>
 </div>
