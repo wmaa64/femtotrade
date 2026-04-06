@@ -1727,7 +1727,7 @@ table.additional-info > tbody > tr > th {
   .logoimageWrapper {
     position: relative;
     width: 250px;   /* control width */
-    height: 100px;   /* control height */
+    height: 250px;   /* control height */
   }
 
   .rightStyle  { 
