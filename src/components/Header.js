@@ -70,7 +70,7 @@ const Header = () => {
           <Image
             src="/images/femtotradelogo.jpg"
             alt="FemtoTrade Logo"
-            width= {300}
+            width= {275}
             height={75}
           />
         </Link>
