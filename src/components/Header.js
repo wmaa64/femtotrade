@@ -64,16 +64,15 @@ const Header = () => {
       </div>
 
       {/* Center: logo */}
-      <div className='centerStyle'>
-        {/* Using /public/images/FemtotradeLogo.jpeg -> ensure file exists at public/images/... */}
-        <Link href="/" title="Go to Home" style={{ display: 'inline-block' }}>
+      <div className='logoimageWrapper'>
+        {/*<Link href="/" title="Go to Home" style={{ display: 'inline-block' }}>*/}
           <Image
             src="/images/femtotradelogo.jpg"
             alt="FemtoTrade Logo"
-            width= {275}
-            height={75}
+            fill
+            style={{ objectFit: 'contain' }}
           />
-        </Link>
+        {/*</Link>*/}
       </div>
 
       {/* Right: user welcome */}

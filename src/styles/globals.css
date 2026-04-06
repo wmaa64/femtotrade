@@ -1734,6 +1734,11 @@ table.additional-info > tbody > tr > th {
   margin-left: 15%;
 }
 
+  .logoimageWrapper {
+    position: relative;
+    width: 200px;   /* control width */
+    height: 75px;   /* control height */
+  }
 
   .rightStyle  { 
     display: flex; 
@@ -1776,6 +1781,12 @@ table.additional-info > tbody > tr > th {
 }
 
 @media (min-width: 768px) {
+  .logoimageWrapper {
+    position: relative;
+    width: 400px;   /* control width */
+    height: 100px;   /* control height */
+  }
+
   .rightStyle  { 
     display: flex; 
     align-items: center; 
@@ -1793,6 +1804,12 @@ table.additional-info > tbody > tr > th {
   }
 
 @media (min-width: 1024px) {
+  .logoimageWrapper {
+    position: relative;
+    width: 400px;   /* control width */
+    height: 100px;   /* control height */
+  }
+
   .rightStyle  { 
     display: flex; 
     align-items: center; 
