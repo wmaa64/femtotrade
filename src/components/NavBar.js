@@ -13,7 +13,7 @@ const NavBar = () => {
 return (
 <div className="navbar-container">
     <div>
-        <p>Pet Suppliers</p>
+        <h1>Pet Suppliers</h1>
     </div>
     <div className="navbar" logo="true">
         <nav className={Styles.navbar}>
