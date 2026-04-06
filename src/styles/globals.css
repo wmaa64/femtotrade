@@ -1735,18 +1735,12 @@ table.additional-info > tbody > tr > th {
 }
 
 
-   .rightStyle  { display: flex; align-items: center; gap: 12px }
+  .rightStyle  { 
+    display: flex; 
+    align-items: center; 
+    gap: 6px 
+  }
 
-   /*.logoStyle  { width: 150; height: 60; object-fit:fill; cursor: pointer;  }*/
-/*
-.logoStyle {
-  width: 200px;
-  height: 100px;
-  object-fit: fill;  /* use contain to keep aspect ratio */
-  /*
-  cursor: pointer;
-}
-*/
 
    .langButtonStyle  {
     background: transparent;
@@ -1768,18 +1762,57 @@ table.additional-info > tbody > tr > th {
 }
 
 .phone-icon {
-  font-size: 18px;
+  font-size: 30px;
 }
 
 .phone-number {
   color: #fff;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 30px;
 }
 
 .phone-number:hover {
   text-decoration: underline;
 }
+
+@media (min-width: 768px) {
+  .rightStyle  { 
+    display: flex; 
+    align-items: center; 
+    gap: 12px 
+  }
+
+  .phone-icon {
+    font-size: 18px;
+  }
+
+  .phone-number {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+  }
+
+@media (min-width: 1024px) {
+  .rightStyle  { 
+    display: flex; 
+    align-items: center; 
+    gap: 12px 
+  }
+
+  .phone-icon {
+    font-size: 18px;
+  }
+
+  .phone-number {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+  }
+
+}
+
+
+
 
 /*  ---------------------------------------- */
 .input-field {
