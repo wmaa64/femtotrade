@@ -97,7 +97,9 @@ a {
 .leftStyle {
   display: flex;
   align-items: center;
-  gap: 10px
+  gap: 10px;
+  width: 100px;
+  height: 100px;
 }
 
 .flagwrapper {
@@ -1882,7 +1884,9 @@ table.additional-info>tbody>tr>th {
     .leftStyle {
       display: flex;
       align-items: center;
-      gap: 10px
+      gap: 10px;
+      width: 100px;
+      height: 100px;
     }
 
     .flagwrapper {
