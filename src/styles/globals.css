@@ -183,9 +183,8 @@ a {
   color: blue;
 }
 
-.navbar-container>div p {
-  font-size: 48px;
-  font-weight: 600;
+.navbar-container > div h1 {
+  font-size: clamp(20px, 5vw, 40px);
 }
 
 .navbar-container>div>a {
@@ -1958,11 +1957,6 @@ table.additional-info>tbody>tr>th {
   color: blue;
 }
 
-
-.navbar-container>div p {
-  font-size: 32px;
-  font-weight: 600;
-}
 
 .navbar-container>div>a {
   margin-right: -0.1rem;
