@@ -108,11 +108,11 @@ a {
 
 .flagwrapper .flag {
   width: 52px;
-  height: 36px;
+  height: auto;
 }
 
 .flagwrapper span {
-  font-size: 26px;
+  font-size: 30px;
 }
 
 
