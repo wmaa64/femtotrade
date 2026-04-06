@@ -3,13 +3,15 @@
 .section_container {
   display: flex;
   flex-direction: column;   /* ✅ stack on mobile */
+  width: 100%;
   gap: 20px;
   padding: 10px;
 }
 
-/* Carousel */
-.carousel_box {
-  width: 100%;
+.carousel_box,
+.perfect_message {
+  width: 100% !important;
+  flex: none !important;
 }
 
 .carousel_box img {
