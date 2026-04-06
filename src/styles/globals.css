@@ -93,11 +93,28 @@ a {
   justify-content: space-between;
 }
 
+
 .leftStyle {
   display: flex;
   align-items: center;
   gap: 10px
 }
+
+.flagwrapper {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.flagwrapper .flag {
+  width: 52px;
+  height: 36px;
+}
+
+.flagwrapper span {
+  font-size: 26px;
+}
+
 
 .logoimageWrapper {
   position: relative;
@@ -1861,6 +1878,27 @@ table.additional-info>tbody>tr>th {
 /* For Desktop Design -------------------------------- */
   @media (min-width: 1024px) {
     /* Header ----------- */
+
+    .leftStyle {
+      display: flex;
+      align-items: center;
+      gap: 10px
+    }
+
+    .flagwrapper {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .flagwrapper .flag {
+      width: 26px;
+      height: 18px;
+    }
+
+    .flagwrapper span {
+      font-size: 14px;
+    }
 
     .logoimageWrapper {
       position: relative;

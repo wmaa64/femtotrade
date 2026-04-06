@@ -50,15 +50,15 @@ const Header = () => {
           title={language === 'en' ? 'Switch to Arabic' : 'Switch to English'}
         >
           {language === 'en' ? (
-            <>
-              <Flag code="EG" style={{ width: 26, height: 18 }} />
+            <div  className='flagwrapper'>
+              <Flag code="EG" className='flag' />
               <span style={{ fontSize: 14 }}>AR</span>
-            </>
+            </div>
           ) : (
-            <>
-              <Flag code="US" style={{ width: 26, height: 18 }} />
+            <div className='flagwrapper'>
+              <Flag code="US" className='flag' />
               <span style={{ fontSize: 14 }}>EN</span>
-            </>
+            </div>
           )}
         </button>
       </div>
