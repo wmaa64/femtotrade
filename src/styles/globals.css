@@ -1,20 +1,6 @@
 /* GLOBALS ----------------------------------------- */
 @import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
 
-html {
-  font-size: 16px;
-}
-
-body {
-  overflow-x: hidden;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-
 html,
 body,
 * {
@@ -46,7 +32,6 @@ a {
   padding: 10px 0;
 }
 
-
 .btn {
   width: 100%;
   max-width: 400px;
@@ -63,7 +48,6 @@ a {
   transform: scale(1, 1);
   transition: transform 0.5s ease;
 }
-
 .btn:hover {
   transform: scale(1.1, 1.1);
 }
@@ -488,7 +472,6 @@ a {
   width: 100%;
 }
 .product-card {
-  width: 100%;
   cursor: pointer;
   transform: scale(1, 1);
   transition: transform 0.5s ease;
@@ -516,9 +499,12 @@ a {
 }
 
 .product-detail-container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
+  display: flex;
+  grid-gap: 40px;
+  gap: 40px;
+  margin: 60px auto 0 auto;
+  color: #324d67;
+  width: 70%;
 }
 
 .product-detail-image {
@@ -809,23 +795,10 @@ span.item-desc {
   margin: 0 auto;
 }
 
-.products-container {
-  display: grid;
-  grid-template-columns: 1fr;   /* ✅ 1 per row on mobile */
-  gap: 20px;
-  padding: 10px;
-}
-
-@media (min-width: 768px) {
-  .products-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 1024px) {
-  .products-container {
-    grid-template-columns: repeat(3, 1fr);
-  }
+.product-container {
+  overflow: auto;
+  max-height: 70vh;
+  padding: 20px 10px;
 }
 
 .product {
@@ -1687,8 +1660,9 @@ table.additional-info > tbody > tr > th {
 /* === Image Carousel Styles === */
 .carousel {
   width: 100%;
-  height: auto;
-  aspect-ratio: 16/9;
+  height: 660px;
+  position: relative;
+  overflow: hidden;
 }
 
 .carousel-image {
@@ -1811,106 +1785,4 @@ table.additional-info > tbody > tr > th {
 .input-field {
   font-size: 18px; /* or 16px minimum for iPhone */
   /* padding: 12px;   /* makes it look bigger and easier to tap */
-}
-
-/* ================= MOBILE ================= */
-@media (max-width: 768px) {
-
-  /* Navbar */
-  .navbar-container {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-  }
-
-  .navbar-container > div > a {
-    font-size: 28px;
-  }
-
-  /* Header center fix */
-  .centerStyle {
-    margin-left: 0;
-  }
-
-  /* Hero / carousel */
-  .carousel {
-    height: 300px;
-  }
-
-  /* Section layout (homepage) */
-  .section_container {
-    flex-direction: column;
-  }
-
-  /* Perfect message */
-  .perfect-occasions {
-    flex-direction: column;
-    margin: 20px;
-  }
-
-  .perfect-message {
-    height: auto;
-    padding: 20px;
-  }
-
-  /* Banner text */
-  .banner {
-    margin: 20px;
-    font-size: 20px;
-  }
-
-  .tagline {
-    font-size: 28px;
-    width: 100%;
-  }
-
-  /* Products grid */
-  .products-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  /* Product detail */
-  .product-detail-container {
-    flex-direction: column;
-    width: 95%;
-  }
-
-  .product-detail-image {
-    width: 100%;
-    height: auto;
-  }
-
-  /* Cart */
-  .cart-container {
-    width: 100%;
-    padding: 20px;
-  }
-
-  .cart-bottom {
-    padding: 20px;
-  }
-
-  .btn-container {
-    width: 100%;
-  }
-/* Tabs */
-
-  /* Forms */
-  .form-container {
-    width: 100%;
-    margin-left: 0;
-    padding: 10px;
-  }
-
-  .contact-us-form {
-    width: 100%;
-  }
-
-  /* Text scaling */
-  h1 { font-size: 24px; }
-  h2 { font-size: 20px; }
-  h3 { font-size: 18px; }
-  p  { font-size: 14px; }
-
 }
