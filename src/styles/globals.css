@@ -180,9 +180,12 @@ a {
 .navbar-container>div {
   display: flex;
   justify-content: center;
+  color: blue;
+}
+
+.navbar-container>div>p {
   font-size: 48px;
   font-weight: 600;
-  color: blue;
 }
 
 .navbar-container>div>a {
@@ -1952,9 +1955,13 @@ table.additional-info>tbody>tr>th {
 .navbar-container>div {
   display: flex;
   justify-content: center;
+  color: blue;
+}
+
+
+.navbar-container>div>p {
   font-size: 32px;
   font-weight: 600;
-  color: blue;
 }
 
 .navbar-container>div>a {
