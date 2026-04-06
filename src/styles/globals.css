@@ -197,7 +197,7 @@ a {
 .navbar {
   border-top: 1px solid red;
   padding-top: 3px;
-  width: 100vw;
+  width: 100dvw;
 }
 
 .navbar a {
