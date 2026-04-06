@@ -15,7 +15,7 @@ return (
     <div>
         <h1>Pet Suppliers</h1>
     </div>
-    <div className="navbar" logo="true">
+    <div className="navbar" >
         {/*<nav className={Styles.navbar}>*/}
             <div className="navitems" logo="true">
                 {userInfo?.isAdmin ? (
