@@ -24,7 +24,7 @@ return (
                 </> ) : (
                 <>
                     <Link href="/">Home</Link>
-                    <Link href="/pet-suppliers">Pet Suppliers Shop</Link>
+                    <Link href="/pet-suppliers">Pet Suppliers</Link>
                     <Link href="/about">About Us</Link>
                 </>
             )}
