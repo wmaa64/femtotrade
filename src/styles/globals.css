@@ -174,7 +174,7 @@ a {
   flex-direction: column;
   justify-content: space-between;
   margin: 24px 18px;
-  position: relative;
+  width: 100%;
 }
 
 .navbar-container>div {
