@@ -66,11 +66,10 @@ const Header = () => {
       {/* Center: logo */}
       <div className='logoimageWrapper'>
         {/*<Link href="/" title="Go to Home" style={{ display: 'inline-block' }}>*/}
-          <Image
+          <Image className='logoimage'
             src="/images/femtotradelogo.jpg"
             alt="FemtoTrade Logo"
             fill
-            style={{ objectFit: 'contain' }}
           />
         {/*</Link>*/}
       </div>

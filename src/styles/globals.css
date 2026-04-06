@@ -105,6 +105,10 @@ a {
   height: 150px;  /* control height */
 }
 
+.logoimage {
+  object-fit: fill;
+}
+
 .rightStyle {
   display: flex;
   align-items: center;
@@ -1831,6 +1835,11 @@ table.additional-info>tbody>tr>th {
     /* control height */
   }
 
+  
+  .logoimage {
+    object-fit: contain;
+  }
+  
   .rightStyle {
     display: flex;
     align-items: center;
@@ -1859,6 +1868,10 @@ table.additional-info>tbody>tr>th {
       /* control width */
       height: 100px;
       /* control height */
+    }
+
+    .logoimage {
+      object-fit: contain;
     }
 
     .rightStyle {
