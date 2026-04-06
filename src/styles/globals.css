@@ -176,7 +176,7 @@ a {
   justify-content: space-between;
 
   margin: 0;              /* 🔥 remove side margins */
-  padding: 12px 16px;    /* ✅ use padding instead */
+  /* padding: 12px 16px;    /* ✅ use padding instead */
   width: 100%;
 }
 
