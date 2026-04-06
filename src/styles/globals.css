@@ -183,7 +183,7 @@ a {
   /* padding: 12px 16px;    /* ✅ use padding instead */
 }
 
-.navbar-container>div {
+.navbar-container> div:first-child {
   display: flex;
   justify-content: center;
   color: blue;
