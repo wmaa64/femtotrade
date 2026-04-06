@@ -16,8 +16,8 @@ return (
         <h1>Pet Suppliers</h1>
     </div>
     <div className="navbar" logo="true">
-        <nav className={Styles.navbar}>
-            <div className={Styles.navItem} logo="true">
+        {/*<nav className={Styles.navbar}>*/}
+            <div className="navitems" logo="true">
                 {userInfo?.isAdmin ? (
                     <>
                         <Link href="/products/manage">Manage Products</Link>
@@ -58,7 +58,7 @@ return (
                 </button>
                 {showCart && <Cart />}
             </div>
-        </nav>
+        {/*</nav>*/}
     </div>
 </div>
 );
