@@ -49,15 +49,19 @@ const Home = () => {
 return (
 <>
   <NextSeo
-    title="Pets Suppliers | Cat's Best | Femtotrade"
-    description="Pet Suppliers in Egypt - Cat's Best - Original litter - Active against urine and odours - 100% natural - 100% biodegradable - Dust-free - Long-lasting - Odour control - Easy to clean "
+    title="Pets Suppliers | Cat's Best | Femtotrade | فرش القطط و الكلاب والحيوانات الاليفة فى مصر"
+    description="Pet Suppliers in Egypt - Cat's Best - Original litter - Active against urine and odours 
+    - 100% natural - 100% biodegradable - Dust-free - Long-lasting - Odour control - Easy to clean
+    - فرش القطط و الكلاب والحيوانات الاليفة فى مصر - فرش قطط اورجنال - 
+    فرش قطط اكتيف ضد البول والروائح - فرش قطط 100% طبيعي - فرش قطط 100% قابل للتحلل -
+     فرش قطط خالي من الغبار - فرش قطط طويل الأمد - فرش قطط مكافحة الروائح - فرش قطط سهل التنظيف"
   />
 
-  <div className={Styles.section_container} >
-    <div className={Styles.carousel_box}>
+  <div className="section_container" >
+    <div className="carousel_box">
         <ImageCarousel images={images} interval={5000} />
     </div>
-    <div className={Styles.perfect_message}>
+    <div className="perfect_message">
         <p>Perfect for </p>
         <p>Cats, Dogs & Small Animals</p>
         <p>

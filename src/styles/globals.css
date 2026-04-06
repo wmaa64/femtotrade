@@ -264,102 +264,38 @@ a {
 
 /* HOMEPAGE ---------------------------------------- */
 
-/* Main homepage logo */
-.frontlogo {
-  background-position: center top;
-  background-image: url("../../public/images/newfrontimage.jpg");
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 800px;
-}
-
-/* "Luxury Macarons made by hand" banner on front page */
-.banner {
-  float: right;
-  margin: 100px 350px;
-  font-size: 36px;
+.section_container {
   display: flex;
   flex-direction: column;
-  text-align: center;
+  align-items: stretch ; 
+  gap: 15px;
+  margin-top: 10px;
 }
 
-.banner>span:nth-child(2) {
-  width: 200px;
-  background-color: #cbb790;
-  color: #ffffff;
-  margin: 30px auto;
-  padding: 10px;
+/* LEFT: Carousel */
+.carousel_box {
+  flex: 1.5 ;              /* bigger than text */
 }
 
-.tagline {
-  font-weight: 600;
-  font-family: "Oswald", sans-serif;
-  text-transform: uppercase;
-  font-size: 60px;
-  line-height: 1.1em;
-  color: #ffffff;
-  width: 500px;
-}
-
-/* Newsletter component - home page */
-.newsletter {
-  background-color: #cbb790;
-  max-width: 60%;
-  margin: 0 auto;
-  display: flex;
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-.newsletter-image {
-  width: 593px;
-  padding: 0px 20px;
-  position: relative;
-  top: -35px;
-  text-align: center;
-  animation: fadeIn 4s;
-}
-
-/* Main intro on home page */
-.intro {
-  background-color: #cbb790;
-  width: 50%;
-  margin: 50px auto;
-  padding: 20px;
-  font-size: 18px;
-}
-
-.intro p {
-  padding-bottom: 10px;
-}
-
-/* Perfect message component */
-.perfect-occasions {
-  display: flex;
-  margin: 100px 10%;
-}
-
-.perfect-message {
-  background-color: #959e92ff;
+.carousel_box img {
   width: 100%;
-  height: 225px;
-  padding: 50px 40px;
-  position: relative;
-  left: 10px;
-  top: 20px;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* RIGHT: Text */
+.perfect_message {
+  flex: 1;              /* smaller than carousel */
+  background-color: #959e92ff;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   text-align: center;
 }
 
-.perfect-message>p:nth-child(1) {
+
+.perfect_message > p:nth-child(1) {
   font-weight: 300;
   font-size: 21px;
   letter-spacing: 1px;
@@ -368,15 +304,67 @@ a {
   text-transform: uppercase;
 }
 
-.perfect-message>p:nth-child(2) {
-  font-size: 34px;
+.perfect_message > p:nth-child(2) {
+  font-size: 24px;
   font-weight: 500;
   line-height: 24px;
   text-transform: uppercase;
 }
 
-.perfect-message>p:nth-child(3) {
+.perfect_message > p:nth-child(3) {
   padding-top: 30px;
+  text-align: justify;
+}
+
+
+/* === Image Carousel Styles === */
+.carousel {
+  width: 100%;
+  height: 100vw;
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.carousel-image.active {
+  opacity: 1;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.4);
+  border: none;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 4px;
+  z-index: 2;
+  user-select: none;
+}
+
+.carousel-btn:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.carousel-btn.prev {
+  left: 10px;
+}
+
+.carousel-btn.next {
+  right: 10px;
 }
 
 /* FOOTER --------------------------------------- */
@@ -1823,56 +1811,6 @@ table.additional-info>tbody>tr>th {
   width: 220px;
 }
 
-
-/* === Image Carousel Styles === */
-.carousel {
-  width: 100%;
-  height: 660px;
-  position: relative;
-  overflow: hidden;
-}
-
-.carousel-image {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-}
-
-.carousel-image.active {
-  opacity: 1;
-}
-
-.carousel-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 24px;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.4);
-  border: none;
-  cursor: pointer;
-  padding: 8px 12px;
-  border-radius: 4px;
-  z-index: 2;
-  user-select: none;
-}
-
-.carousel-btn:hover {
-  background-color: rgba(0, 0, 0, 0.7);
-}
-
-.carousel-btn.prev {
-  left: 10px;
-}
-
-.carousel-btn.next {
-  right: 10px;
-}
 
 
 /* For Tablet Design -------------------------------- */
