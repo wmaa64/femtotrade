@@ -96,7 +96,7 @@ const ProductDetails = () => {
             </p>
 
             <div className="quantity">
-              <h3>Quantity:</h3>
+              <h2>Quantity:</h2>
               <p className="quantity-desc">
                 <span className="minus" onClick={decQty}>
                   <AiOutlineMinus />
@@ -108,7 +108,7 @@ const ProductDetails = () => {
               </p>
             </div>
 
-            <div className="sku">SKU: {product._id}</div>
+            {/*<div className="sku">SKU: {product._id}</div>*/}
 
             <div className="buttons">
               <button type="button" className="add-to-cart" onClick={() => onAdd(product, qty)}>
