@@ -2057,6 +2057,9 @@ table.additional-info>tbody>tr>th {
   flex-direction: column;
   justify-content: center;
   text-align: center;
+  width: 100dvw;
+  height: 100%;
+
 }
 
 
