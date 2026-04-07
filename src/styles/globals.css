@@ -270,6 +270,7 @@ a {
   align-items: stretch ; 
   gap: 15px;
   margin-top: 10px;
+  justify-content: center;
 }
 
 /* LEFT: Carousel */
@@ -292,7 +293,7 @@ a {
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  width: 80dvw;
+  width: 90dvw;
   height: 100%;
 }
 
