@@ -37,6 +37,7 @@ return (
                         minimumFractionDigits: 2,
                     })}
                 </p>
+                <p className="product-description">{product.description.ar}</p>
             </div>
         </Link>
     </div>

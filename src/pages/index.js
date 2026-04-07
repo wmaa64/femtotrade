@@ -94,7 +94,7 @@ return (
 
   <div>
     <div className="products-heading">
-      <h2>Featured Pets Suppliers</h2>
+      <h2>المنتجات المميزة - فرش الحيوانات الاليفة الالمانى الجديد </h2>
     </div>
 
     { (loading) ? (
