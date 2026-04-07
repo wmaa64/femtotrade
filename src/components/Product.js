@@ -11,12 +11,16 @@ const  toTitleCase = (str)=> {
 }
 
 const Product = ({ product }) => {
-    const seoProductName = product.name.en || "Product";
+    const seoProductName = product.name.en  + " "  + product.name.ar || "Cat's Best - Dog's Best"; // Fallback if name is missing
 return (
 <>
     <NextSeo
-        title={`${toTitleCase(seoProductName)} - Macaron Magic`}
-        description="Great tasting home-made macarons"
+        title={`${toTitleCase(seoProductName)} - فرش القطط و الكلاب والحيوانات الاليفة فى مصر منتج المانى اصلى `}
+        description="Pet Suppliers in Egypt - Cat's Best - Original litter - Active against urine and odours 
+    - 100% natural - 100% biodegradable - Dust-free - Long-lasting - Odour control - Easy to clean
+    - فرش القطط و الكلاب والحيوانات الاليفة فى مصر - فرش قطط اورجنال - 
+    فرش قطط اكتيف ضد البول والروائح - فرش قطط 100% طبيعي - فرش قطط 100% قابل للتحلل -
+     فرش قطط خالي من الغبار - فرش قطط طويل الأمد - فرش قطط مكافحة الروائح - فرش قطط سهل التنظيف"
     />
 
     <div>
