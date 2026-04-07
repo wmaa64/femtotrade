@@ -283,21 +283,23 @@ a {
   object-fit: contain;
 }
 
-/* RIGHT: Text */
+/* Left: Text */
 .perfect_message {
   flex: 1;              /* smaller than carousel */
   background-color: #959e92ff;
-  padding: 30px 20px;
+  padding: 5px 5px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
+  width: 100dvw;
+  height: 100dvh;
 }
 
 
 .perfect_message > p:nth-child(1) {
   font-weight: 300;
-  font-size: 21px;
+  font-size: 24px;
   letter-spacing: 1px;
   line-height: 23px;
   padding-bottom: 5px;
@@ -305,15 +307,48 @@ a {
 }
 
 .perfect_message > p:nth-child(2) {
-  font-size: 24px;
+  font-size: 28px;
   font-weight: 500;
   line-height: 24px;
   text-transform: uppercase;
 }
 
 .perfect_message > p:nth-child(3) {
-  padding-top: 30px;
+  padding-top: 10px;
   text-align: justify;
+}
+
+
+.perfect_message-ar {
+  flex: 1;              /* smaller than carousel */
+  background-color: #959e92ff;
+  padding: 5px 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+
+.perfect_message-ar > p:nth-child(1) {
+  font-weight: 300;
+  font-size: 24px;
+  letter-spacing: 1px;
+  line-height: 23px;
+  padding-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.perfect_message-ar > p:nth-child(2) {
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+.perfect_message-ar > p:nth-child(3) {
+  padding-top: 10px;
+  text-align: right;
 }
 
 
@@ -2012,7 +2047,8 @@ table.additional-info>tbody>tr>th {
   object-fit: contain;
 }
 
-/* RIGHT: Text */
+
+/* Left: Text */
 .perfect_message {
   flex: 1;              /* smaller than carousel */
   background-color: #959e92ff;
@@ -2043,6 +2079,39 @@ table.additional-info>tbody>tr>th {
 .perfect_message > p:nth-child(3) {
   padding-top: 30px;
   text-align: justify;
+}
+
+
+.perfect_message-ar {
+  flex: 1;              /* smaller than carousel */
+  background-color: #959e92ff;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+
+.perfect_message-ar > p:nth-child(1) {
+  font-weight: 300;
+  font-size: 21px;
+  letter-spacing: 1px;
+  line-height: 23px;
+  padding-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.perfect_message-ar > p:nth-child(2) {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+.perfect_message-ar > p:nth-child(3) {
+  padding-top: 30px;
+  text-align: right;
 }
 
 
