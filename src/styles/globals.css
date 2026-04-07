@@ -316,7 +316,7 @@ a {
 }
 
 .perfect_message > p:nth-child(3) {
-  padding: 15px;
+  padding: 25px;
   text-align: justify;
 }
 
@@ -352,7 +352,7 @@ a {
 }
 
 .perfect_message-ar > p:nth-child(3) {
-  padding: 15px;
+  padding: 25px;
   text-align: right;
 }
 
