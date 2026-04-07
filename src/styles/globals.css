@@ -65,13 +65,13 @@ a {
 
 .minus {
   color: #f02d34;
-  font-size: 16px;
+  font-size: 26px;
   padding: 6px 12px;
   cursor: pointer;
 }
 
 .quantity-desc span {
-  font-size: 18px;
+  font-size: 32px;
   font-weight: 500;
   padding: 6px 12px;
   cursor: pointer;
@@ -79,7 +79,7 @@ a {
 
 .plus {
   color: rgb(49, 168, 49);
-  font-size: 16px;
+  font-size: 26px;
   padding: 6px 12px;
   cursor: pointer;
 }
