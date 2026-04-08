@@ -4,8 +4,12 @@ const About = () => {
   return (
     <>
     <NextSeo
-      title="Macaron Magic- About Us"
-      description="Great tasting home made macarons"
+    title="Pets Suppliers | Cat's Best | Femtotrade | فرش القطط و الكلاب والحيوانات الاليفة فى مصر"
+    description="Pet Suppliers in Egypt - Cat's Best - Original litter - Active against urine and odours 
+    - 100% natural - 100% biodegradable - Dust-free - Long-lasting - Odour control - Easy to clean
+    - فرش القطط و الكلاب والحيوانات الاليفة فى مصر - فرش قطط اورجنال - 
+    فرش قطط اكتيف ضد البول والروائح - فرش قطط 100% طبيعي - فرش قطط 100% قابل للتحلل -
+     فرش قطط خالي من الغبار - فرش قطط طويل الأمد - فرش قطط مكافحة الروائح - فرش قطط سهل التنظيف"
     />
     <div className="about-us">
         <p>Specialized in German Pets Suppliers Specialy in  Organic Litter for home animals</p>
