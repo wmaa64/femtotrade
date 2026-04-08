@@ -7,7 +7,6 @@ import { useStateContext } from "../../context/StateContext";
 //import { urlFor } from "../../lib/client";
 import { eUSLocale } from "../../lib/utils";
 import EmptyCart from "./Cart/EmptyCart";
-import getStripe from "../../lib/getStripe";
 import toast from "react-hot-toast";
 
 const Cart = () => {
@@ -116,7 +115,7 @@ return (
 
             {cartItems.length < 1 && (
                 <EmptyCart>
-                    <Link href="/">
+                    <Link href="/" className="btn-container">
                         <button type="button" onClick={() => setShowCart(false)} className="btn">
                             Continue Shopping
                         </button>
@@ -153,22 +152,25 @@ return (
 
             {cartItems.length >= 1 && (
                 <div className="cart-bottom">
-                     <div className="customer-info">
+                    <div className="customer-info">
                         <label style={{color: "black"}}>Enter Name:</label>
                         <input  className="input-field" type="text"  placeholder="Enter your name"         value={name}   required
                             onChange={handleNameChange} 
                         />
-
+                    </div>
+                    <div className="customer-info">
                         <label style={{color: "black"}}>Enter Phone Number (11 digits):</label>
                         <input type="tel"  inputMode="numeric"  className="input-field"  placeholder="01XXXXXXXXX"
                             value={mobile}    onChange={handleMobileChange}
                         />
-                        
+                    </div>
+                    <div className="customer-info">    
                         <label style={{color: "black"}}>Enter Address:</label>
                         <input  className="input-field" type="text"    placeholder="Enter your address"  value={address}  required
                             onChange={handleAddressChange}
                         />
-
+                    </div>
+                    <div className="customer-info">
                         <label style={{color: "black"}}>Enter Valid Email:</label>
                         <input  className="input-field" type="email"  placeholder="Enter your email"   value={email}   
                             onChange={handleEmailChange} 
