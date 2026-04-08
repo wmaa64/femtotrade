@@ -13,6 +13,9 @@ return (
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="google-site-verification" content="WUlB-DC4Ep631yNAivYsTKsJL9q2tN8O0hlLFJcES8c" />
         <link rel="canonical" href="https://femtotrade.shop/" />
+        <title>شركة متخصصة فى  فرش القطط و الكلاب والحيوانات الاليفة فى مصر - فرش قطط اورجنال </title>
+        <meta name="description" content="تسوق منتج المانى عالى الجودة - فرش القطط و الكلاب والحيوانات الاليفة فى مصر - اورجنال - 
+    اكتيف ضد البول والروائح - 100% طبيعي - 100% قابل للتحلل - خالي من الغبار - طويل الأمد - مكافحة الروائح - سهل التنظيف!" />        
         <link rel="apple-touch-icon" sizes="180x180" href="/favicon/img4.jpeg" />
         <link rel="icon" type="image/jpeg" sizes="32x32" href="/favicon/img4.jpeg" />
         <link rel="icon" type="image/jpeg" sizes="16x16" href="/favicon/img4.jpeg" />
@@ -20,10 +23,6 @@ return (
         <link rel="mask-icon" href="/favicon/img4.jpeg" color="#5bbad5" />
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff" />
-        <title>Femto Trade - شركة متخصصة فى  فرش القطط و الكلاب والحيوانات الاليفة فى مصر - فرش قطط اورجنال - </title>
-        <meta name="description" content="تسوق فرش القطط و الكلاب والحيوانات الاليفة فى مصر - فرش قطط اورجنال - 
-    فرش قطط اكتيف ضد البول والروائح - فرش قطط 100% طبيعي - فرش قطط 100% قابل للتحلل -
-     فرش قطط خالي من الغبار - فرش قطط طويل الأمد - فرش قطط مكافحة الروائح - فرش قطط سهل التنظيف!" />        
     </Head>
     <header>
         <Header />
