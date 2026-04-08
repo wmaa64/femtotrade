@@ -14,19 +14,29 @@ return (
   <>
     <DefaultSeo
       {...SEO}
-      title="Next SEO Example"
-      description="Next SEO is a plug in that makes managing your SEO easier in Next.js projects."
+        title="Pets Suppliers | Cat's Best | Femtotrade | فرش القطط و الكلاب والحيوانات الاليفة فى مصر"
+        description="Pet Suppliers in Egypt - Cat's Best - Original litter - Active against urine and odours 
+    - 100% natural - 100% biodegradable - Dust-free - Long-lasting - Odour control - Easy to clean
+    - فرش القطط و الكلاب والحيوانات الاليفة فى مصر - فرش قطط اورجنال - 
+    فرش قطط اكتيف ضد البول والروائح - فرش قطط 100% طبيعي - فرش قطط 100% قابل للتحلل -
+     فرش قطط خالي من الغبار - فرش قطط طويل الأمد - فرش قطط مكافحة الروائح - فرش قطط سهل التنظيف"
       twitter={{
         handle: "@handle",
         site: "@site",
         cardType: "summary_large_image",
       }}
+      openGraph={{
+        type: 'website',
+        locale: 'en_EG',
+        url: 'https://femtotrade.shop/',
+        site_name: 'Pet Suppliers',
+    }}
     />
     
     <StateContext>
       <Layout>
         <Toaster />
-        <Component {...pageProps} />;
+        <Component {...pageProps} />
       </Layout>
     </StateContext>
   </>
