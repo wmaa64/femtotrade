@@ -11,6 +11,7 @@ return (
     <Head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width" />
+        <meta name="google-site-verification" content="WUlB-DC4Ep631yNAivYsTKsJL9q2tN8O0hlLFJcES8c" />
         {/*<title>Macaron Magic | great tasting home-made macarons</title>*/}
         <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />

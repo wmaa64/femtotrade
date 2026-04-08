@@ -4,7 +4,6 @@ import Image from "next/image";
 import {AiOutlineMinus,AiOutlinePlus,AiOutlineLeft,AiOutlineShopping,} from "react-icons/ai";
 import { TiDeleteOutline } from "react-icons/ti";
 import { useStateContext } from "../../context/StateContext";
-//import { urlFor } from "../../lib/client";
 import { eUSLocale } from "../../lib/utils";
 import EmptyCart from "./Cart/EmptyCart";
 import toast from "react-hot-toast";
