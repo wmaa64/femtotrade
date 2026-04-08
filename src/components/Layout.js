@@ -20,7 +20,10 @@ return (
         <link rel="mask-icon" href="/favicon/img4.jpeg" color="#5bbad5" />
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff" />
-        
+        <title>Femto Trade - شركة متخصصة فى  فرش القطط و الكلاب والحيوانات الاليفة فى مصر - فرش قطط اورجنال - </title>
+        <meta name="description" content="تسوق فرش القطط و الكلاب والحيوانات الاليفة فى مصر - فرش قطط اورجنال - 
+    فرش قطط اكتيف ضد البول والروائح - فرش قطط 100% طبيعي - فرش قطط 100% قابل للتحلل -
+     فرش قطط خالي من الغبار - فرش قطط طويل الأمد - فرش قطط مكافحة الروائح - فرش قطط سهل التنظيف!" />        
     </Head>
     <header>
         <Header />
