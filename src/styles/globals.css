@@ -1067,7 +1067,7 @@ span.item-desc {
   right: 5px;
   width: 100%;
   padding: 30px 65px;
-  font-size: 18px;
+  font-size: 24px;
 }
 
 .cart-bottom>.customer-info {
@@ -1078,7 +1078,7 @@ span.item-desc {
 }
 
 .cart-bottom>.customer-info .input-field {
-  font-size: 18px;
+  font-size: 24px;
 }
 
 .customer-info label {
