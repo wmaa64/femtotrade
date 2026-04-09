@@ -18,14 +18,25 @@ const resources = {
         "newProducts": "New Products",
         "TopSellingProducts":"TOP SELLING",
         "searchResuls": "Search Results",
-        //HeaderWzSearch
+        //Header
+        "orderByPhone": "Order By Phone",
+        "phonenumber": "+2 01005126629",
+        "emailto": "Email Us",
+        "welcome": "Welcome,",
+        "guest": "Guest",
+
+        //NavBar
+        "home": "Home",
+        "petSuppliers": "Pet Suppliers",
+        "aboutUs": "About Us",
         "login": "Login",
-        "register": "Create an account",
+        "register": "Register",
+
+
       },
     },
     ar: {
       translation: {
-        "welcome": "مرحبًا بكم في متجرنا",
         "discover": "اكتشف أفضل المنتجات لك!",
         "shopNow": "تسوق الآن",
         "featuredProducts": "منتجات مميزة",
@@ -38,9 +49,18 @@ const resources = {
         "TopSellingProducts": "الاكثر مبيعا",
         "searchResuls": "نتائج البحث",
         //Header
-        "login": "تسجيل الدخول",
-        "register": "إنشاء حساب",
+        "orderByPhone": "طلب عبر الهاتف",
+        "phonenumber": "+2 01005126629",
+        "emailto": "أرسل بريدًا",
+        "welcome": "مرحبًا،",
+        "guest": "ضيف",
 
+        //NavBar
+        "home": "الرئيسية",
+        "petSuppliers": "موردين الحيوانات الاليفة",
+        "aboutUs": "من نحن" ,
+        "login": "تسجيل الدخول",
+        "register": "حساب جديد",
       },
     },
 };

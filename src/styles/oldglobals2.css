@@ -223,13 +223,6 @@ a {
   background-color:#000;
 }
 
-.navbar-header {
-  display: flex;
-  justify-content: center;
-  color: blue;
-  padding: 12px 0;
-}
-
 .navitems {
   width: 100%;
   display: flex;
@@ -2053,14 +2046,6 @@ table.additional-info>tbody>tr>th {
     background-color:#000;
   }
 
-  .navbar-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: blue;
-  padding: 12px 0;
-}
-
   .navitems {
     width: 100%;
     display: flex;
@@ -2818,103 +2803,3 @@ span.item-desc {
 
 
 }
-
-/* ============================================================ */
-/* RTL SUPPORT OVERWRITES -------------------------------------- */
-/* ============================================================ */
-
-html[dir="rtl"] {
-  direction: rtl;
-}
-
-html[dir="ltr"] {
-  direction: ltr;
-}
-
-/* Header / Navbar adjustments */
-html[dir="rtl"] .navbar-container > div a {
-  margin-inline-start: -0.1rem;
-  margin-inline-end: 0;
-}
-
-html[dir="rtl"] .cart-item-qty {
-  right: auto;
-  left: -8px;
-}
-
-
-.navbar-container[dir="rtl"] .navbar {
-  justify-content: flex-end; /* push nav items to the right in Arabic */
-}
-
-html[dir="rtl"] .navitems {
-  justify-content: flex-end;
-  flex-direction: row-reverse;
-}
-
-/* RTL فقط */
-.navbar-container[dir="rtl"] .navitems {
-  flex-direction: row; 
-  justify-content: flex-end;   
-  direction: rtl; 
-}
-
-/* LTR */
-.navbar-container[dir="ltr"] .navitems {
-  justify-content: flex-start;
-}
-
-/* Keep English/LTR as row 
-.navbar-container[dir="ltr"] .navitems {
-  flex-direction: row;
-  justify-content: flex-start; 
-}
-
-.navbar-container[dir="rtl"] .navitems {
-  flex-direction: row; 
-  justify-content: flex-end; 
-  text-align: right;   
-  direction: rtl;            
-}
-*/
-
-/* Footer adjustments */
-html[dir="rtl"] footer {
-  text-align: right;
-}
-
-/* Forms / inputs */
-html[dir="rtl"] input, 
-html[dir="rtl"] textarea {
-  text-align: right;
-}
-
-/* Product description, cards, quantity */
-html[dir="rtl"] .product-description,
-html[dir="rtl"] .quantity-desc {
-  text-align: right;
-}
-
-/* Product detail container (images + description) */
-html[dir="rtl"] .product-detail-container {
-  flex-direction: row-reverse;
-}
-
-/* Any inline margins or paddings that need swapping */
-html[dir="rtl"] .telephone {
-  margin-inline-start: 0;
-  margin-inline-end: 10px;
-}
-
-/* Carousel buttons */
-html[dir="rtl"] .carousel-btn.prev {
-  left: auto;
-  right: 10px;
-}
-
-html[dir="rtl"] .carousel-btn.next {
-  right: auto;
-  left: 10px;
-}
-
-/* Buttons with hover transforms remain unchanged for RTL */

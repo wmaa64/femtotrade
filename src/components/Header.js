@@ -5,15 +5,16 @@ import Flag from 'react-world-flags';
 import { MdEmail } from "react-icons/md";
 import { useStateContext } from "../../context/StateContext";
 import { AiFillInstagram, AiOutlineTwitter, AiFillFacebook, AiOutlineWhatsApp } from "react-icons/ai";
-import i18n from '../i18n';
-import Link from "next/link";
+import i18n from "../i18n";
 import Image from 'next/image';
 
 
 const Header = () => {
-  const { t} = useTranslation();
+  const { t } = useTranslation();
   const { userInfo, setUserInfo } = useStateContext();
-  const [language, setLanguage] = useState('en');
+  const language = i18n.language;
+  
+  const isRTL = i18n.language === "ar"; // true if Arabic
 
   useEffect(() => {
     // Load userInfo from localStorage if available
@@ -21,6 +22,7 @@ const Header = () => {
     storedUserInfo ? setUserInfo(JSON.parse(storedUserInfo)) : setUserInfo(null);
   }, []);
 
+  /*
   useEffect(() => {
     if (i18n?.language) {
       setLanguage(i18n.language);
@@ -33,14 +35,18 @@ const Header = () => {
     i18n.changeLanguage(lng);
     setLanguage(lng);
   };
+*/
 
   const toggleLanguage = () => {
     const next = language === 'en' ? 'ar' : 'en';
-    handleLanguageChange(next);
+    i18n.changeLanguage(next);
+    
+    // optional: save preference
+    localStorage.setItem('lang', next);
   };
 
   return (
-    <div className='headerContainerStyle'>
+    <div className='headerContainerStyle' dir={isRTL ? "rtl" : "ltr"} >
       {/* Left: language toggle */}
       <div className='leftStyle'>
         <button className="langButtonStyle"
@@ -78,12 +84,10 @@ const Header = () => {
       <div className='rightStyle'>   
         {/* Telephone icon + number */}
         <div>
-          <span className="phone-icon">Order By Phone: 📞</span>
-          <a href="tel:+2 01005126629" className="phone-number" >
-            +2 01005126629
-          </a><br/>
+          <span className="phone-icon">{t("orderByPhone")}: 📞</span>
+          <a href="tel:+2 01005126629" className="phone-number" >{t("phonenumber")} </a><br/>
           
-          <span className="phone-icon">EmailTo: </span>
+          <span className="phone-icon">{t("emailto")}: </span>
           {/*<MdEmail size={20} color="#d5272e" />*/}
           <a href="mailto:sales@femtotrade.com?subject=Inquiry&body=Hello" className="phone-number" >
             📧 sales@femtotrade.com
@@ -91,12 +95,12 @@ const Header = () => {
           
           {userInfo ? (
             <div style={{ fontSize: 16 }}>
-              <span style={{ marginRight: 8 }}>Welcome,</span>
+              <span style={{ marginRight: 8 }}>{t("welcome")}</span>
               <strong>{(userInfo.name).substring(0, (userInfo.name).indexOf(' '))}</strong>
             </div>
             ) : (
             /* you can replace with login/signup links/buttons if needed */
-            <div style={{ fontSize: 14, opacity: 0.9 }}>Guest</div>
+            <div style={{ fontSize: 14, opacity: 0.9 }}>{t("guest")}</div>
           )}
 
           <div >

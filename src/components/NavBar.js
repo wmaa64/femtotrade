@@ -2,30 +2,46 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import {AiOutlineShopping} from "react-icons/ai";
 import { Cart } from "./";
-import Styles from "../styles/navbar.module.css";
+import i18n from "../i18n";
+import { useTranslation } from "react-i18next";
 import { useStateContext } from "../../context/StateContext";
-import { blue } from "@mui/material/colors";
 
 const NavBar = () => {
+  const { t } = useTranslation();
   const { showCart, setShowCart, totalQuantities, userInfo, logoutUser } = useStateContext();
   const [open, setOpen] = useState(false);
   
+  const isRTL = i18n.language === "ar"; // true if Arabic
+  
+
 return (
-<div className="navbar-container">
-    <div>
-        <h1>Pet Suppliers</h1>
+<div className="navbar-container" dir={isRTL ? "rtl" : "ltr"} >
+    <div className="navbar-header" >
+        {isRTL ? (
+            <>
+                <h1>الرمل الالمانى المعجزة </h1>
+                <h1>🦨 🦊 🐿️ 🐾  🐾 🐱 🐶 🐇</h1>
+            </>
+        ) : (
+            <>
+                <h1>The Miracle German Litter</h1>
+                <h1>🦨 🦊 🐿️ 🐾  🐾 🐱 🐶 🐇</h1>
+            </>
+        )}
+
     </div>
-    <nav className="navbar" >
-        <div className="navitems" logo="true">
+    <nav className="navbar"  >
+        <div className="navitems" logo="true" >
             {userInfo?.isAdmin ? (
                 <>
                     <Link href="/products/manage">Manage Products</Link>
                     <Link href="/orders/manage">Manage Orders</Link>
                 </> ) : (
+                
                 <>
-                    <Link href="/">Home</Link>
-                    <Link href="/pet-suppliers">Pet Suppliers</Link>
-                    <Link href="/about">About Us</Link>
+                    <Link href="/">{t("home")}</Link>
+                    <Link href="/pet-suppliers">{t("petSuppliers")}</Link>
+                    <Link href="/about">{t("aboutUs")}</Link>
                 </>
             )}
 
@@ -36,15 +52,10 @@ return (
             ) : (
                 <>
                     <Link href="/users/login">
-                        <button >
-                            Login
-                        </button>
+                        <button >{t("login")}</button>
                     </Link>
                     <Link href="/users/register">
-                        <button >
-                            Register
-                        </button>
-
+                        <button >{t("register")}</button>
                     </Link>
                 </>
             )}
