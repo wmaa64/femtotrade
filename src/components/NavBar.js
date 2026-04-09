@@ -10,7 +10,14 @@ const NavBar = () => {
   const { t } = useTranslation();
   const { showCart, setShowCart, totalQuantities, userInfo, logoutUser } = useStateContext();
   const [open, setOpen] = useState(false);
-  
+  const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+        setMounted(true);
+    }, []);
+
+  if (!mounted) return null; // 🔥 prevents hydration error
+
   const isRTL = i18n.language === "ar"; // true if Arabic
   
 
@@ -19,7 +26,7 @@ return (
     <div className="navbar-header" >
         {isRTL ? (
             <>
-                <h1>الرمل الالمانى المعجزة </h1>
+                <h1>الرمل الألمانى المعجزة </h1>
                 <h1>🦨 🦊 🐿️ 🐾  🐾 🐱 🐶 🐇</h1>
             </>
         ) : (
@@ -31,7 +38,7 @@ return (
 
     </div>
     <nav className="navbar"  >
-        <div className="navitems" logo="true" >
+        <div className="navitems" logo="true"  >
             {userInfo?.isAdmin ? (
                 <>
                     <Link href="/products/manage">Manage Products</Link>
@@ -40,7 +47,7 @@ return (
                 
                 <>
                     <Link href="/">{t("home")}</Link>
-                    <Link href="/pet-suppliers">{t("petSuppliers")}</Link>
+                    {/*<Link href="/pet-suppliers">{t("petSuppliers")}</Link>*/}
                     <Link href="/about">{t("aboutUs")}</Link>
                 </>
             )}
@@ -61,7 +68,7 @@ return (
             )}
             
             <button  type="button"   className="cart-icon"  onClick={() => setShowCart(true)}>
-                <AiOutlineShopping />
+                <AiOutlineShopping size={28} />
                 <span className="cart-item-qty">{totalQuantities}</span>
             </button>
             {showCart && <Cart />}

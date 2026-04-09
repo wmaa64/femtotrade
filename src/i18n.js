@@ -27,7 +27,6 @@ const resources = {
 
         //NavBar
         "home": "Home",
-        "petSuppliers": "Pet Suppliers",
         "aboutUs": "About Us",
         "login": "Login",
         "register": "Register",
@@ -57,7 +56,6 @@ const resources = {
 
         //NavBar
         "home": "الرئيسية",
-        "petSuppliers": "موردين الحيوانات الاليفة",
         "aboutUs": "من نحن" ,
         "login": "تسجيل الدخول",
         "register": "حساب جديد",

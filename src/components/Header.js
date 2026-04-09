@@ -13,14 +13,21 @@ const Header = () => {
   const { t } = useTranslation();
   const { userInfo, setUserInfo } = useStateContext();
   const language = i18n.language;
-  
-  const isRTL = i18n.language === "ar"; // true if Arabic
+  const [mounted, setMounted] = useState(false);
 
-  useEffect(() => {
+    useEffect(() => {
+        setMounted(true);
+    }, []);
+
+    useEffect(() => {
     // Load userInfo from localStorage if available
     const storedUserInfo = localStorage.getItem('userInfo');
     storedUserInfo ? setUserInfo(JSON.parse(storedUserInfo)) : setUserInfo(null);
   }, []);
+
+  if (!mounted) return null; // 🔥 prevents hydration error
+  
+  const isRTL = i18n.language === "ar"; // true if Arabic
 
   /*
   useEffect(() => {

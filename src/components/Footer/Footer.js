@@ -1,34 +1,34 @@
 import React from "react";
 import Link from "next/link";
 import PaymentIcons from "../PaymentIcons";
-
+import i18n from "../../i18n";
+import { useTranslation } from "react-i18next";
 import MiniCart from "../MiniCart";
 
 import { useStateContext } from "../../../context/StateContext";
 import { AiFillInstagram, AiOutlineTwitter, AiFillFacebook, AiOutlineWhatsApp } from "react-icons/ai";
-import styles from "./Footer.module.css";
 
 const Footer = () => {
   const { showCart } = useStateContext();
 
   return (
     <>
-        <div className={styles.footerContainer}>
-            <div className={styles.footerContent}>
+        <div className="footerContainer">
+            <div className="footerContent">
                 <div>
                     <Link href="/delivery">Delivery</Link>
                     <Link href="/privacy">Privacy</Link>
                     <Link href="/terms">Terms and Conditions of Sale</Link>
                     <Link href="/contact">Contact Us</Link>
                 </div>
-                <div>Contact: hello@macaronmagic.com</div>
+                <div>Contact: sales@femtotrade.com</div>
 
                 <MiniCart />
             </div>
                 
-            <div className={styles.iconContainer}>
+            <div className="iconContainer">
                 <PaymentIcons />
-                <div className={styles.icons}>
+                <div className="icons">
                     <a href="https://www.instagram.com/femtotradepets" target="_blank" rel="noopener noreferrer">
                         <AiFillInstagram   size={30} color="#E1306C" /> {/* Instagram */}
                     </a>
@@ -44,7 +44,7 @@ const Footer = () => {
                 </div>
             </div>
         </div>
-        <p className={styles.copyright}>2022 Macaron Magic All rights reserved</p>
+        <p className="copyright">2026 Femtotrade.shop All rights reserved</p>
     </>
   );
 };

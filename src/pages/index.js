@@ -7,8 +7,8 @@ import i18n from '../i18n';
 const Home = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
-  const isRTL = i18n.language === "ar"; // true if Arabic
-  
+  const [mounted, setMounted] = useState(false);
+
   const images = [
     '/images/image1.jpeg',
     '/images/image2.jpeg',
@@ -19,6 +19,11 @@ const Home = () => {
     '/images/image7.jpeg',
   ];
 
+  useEffect(() => {
+      setMounted(true);
+  }, []);
+
+    
   // ✅ Fetch data client-side from API route
   useEffect(() => {
     const fetchProducts = async () => {
@@ -38,6 +43,10 @@ const Home = () => {
 
     fetchProducts();
   }, []);
+
+  if (!mounted) return null; // 🔥 prevents hydration error
+
+  const isRTL = i18n.language === "ar"; // true if Arabic
 
 return (
 <>
@@ -92,7 +101,18 @@ return (
 
   <div>
     <div className="products-heading">
-      <h2>المنتجات المميزة - الرمل الألمانى للحيوانات الاليفة </h2>
+        {isRTL ? (
+            <>
+                <h2>المنتجات المميزة - الرمل الألمانى للحيوانات الاليفة </h2>
+                <h2>🦨 🦊 🐿️ 🐾  🐾 🐱 🐶 🐇</h2>
+            </>
+        ) : (
+            <>
+                <h2>Featured Products - The Miracle German Litter</h2>
+                <h2>🦨 🦊 🐿️ 🐾  🐾 🐱 🐶 🐇</h2>
+            </>
+        )}
+
     </div>
 
     { (loading) ? (

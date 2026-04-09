@@ -274,7 +274,7 @@ a {
 
 .cart-item-qty {
   position: absolute;
-  right: -8px;
+  right: -18px;
   font-size: 12px;
   color: #eee;
   background-color: #f02d34;
@@ -1917,8 +1917,59 @@ table.additional-info>tbody>tr>th {
   padding: 10px;
   width: 220px;
 }
+/* Footer page ----------------------------- */
+.footerContainer {
+    color: #caa34d; 
+    background-color: #000000; 
+    text-align: center; 
+    margin-top: 20px; 
+    padding: 30px 10px;
+    font-weight: 700; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    gap: 10px; 
+    justify-content: center; 
+    border-bottom: 1px solid #c7c7c7; 
+}
+
+.footerContainer .footerContent { 
+    display: flex; 
+    margin-left: auto; 
+    margin-right: auto; 
+    width: 800px;
+}
+
+.footerContainer .footerContent div { 
+    display: flex; 
+    flex-direction: column; 
+    text-align: left; 
+    min-width: 250px; 
+    margin-right: 20px; 
+}
+
+.footerContainer .footerContent div:last-child {
+    margin-right: 0; 
+}
+
+.footerContainer .mini-cart-bottom { 
+    width: 100%; 
+}
 
 
+.footerContainer .iconContainer { 
+    width: 800px; 
+    display: flex;
+    justify-content: space-between; 
+}
+
+.footerContainer .icons { 
+    font-size: 30px; 
+    display: flex; 
+    gap: 10px; 
+}
+
+/* Responsive Design - END of Mobile Design------------------------------- */
 
 /* For Tablet Design -------------------------------- */
 @media (min-width: 768px) {
@@ -2040,6 +2091,7 @@ table.additional-info>tbody>tr>th {
   }
 
   .navbar-container>div>a {
+    display: flex;
     margin-right: -0.1rem;
     letter-spacing: 0.2rem;
     opacity: 1;
@@ -2071,6 +2123,16 @@ table.additional-info>tbody>tr>th {
     flex-wrap: wrap;   /* 🔥 THIS FIXES OVERFLOW */
   }
 
+  
+.navitems button {
+  color: red ;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 600;
+}
+
   .navbar a {
     font-size: 20px;
     margin-right: 20px;
@@ -2093,7 +2155,7 @@ table.additional-info>tbody>tr>th {
 
   .cart-item-qty {
     position: absolute;
-    right: -8px;
+    right: -18px;
     font-size: 12px;
     color: #eee;
     background-color: #f02d34;
@@ -2816,6 +2878,58 @@ span.item-desc {
   border: none;
 }
 
+/* Footer page ----------------------------- */
+.footerContainer {
+    color: #caa34d; 
+    background-color: #000000; 
+    text-align: center; 
+    margin-top: 20px; 
+    padding: 30px 10px;
+    font-weight: 700; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    gap: 10px; 
+    justify-content: center; 
+    border-bottom: 1px solid #c7c7c7; 
+}
+
+.footerContainer .footerContent { 
+    display: flex; 
+    margin-left: auto; 
+    margin-right: auto; 
+    width: 800px;
+}
+
+.footerContainer .footerContent div { 
+    display: flex; 
+    flex-direction: column; 
+    text-align: left; 
+    min-width: 250px; 
+    margin-right: 20px; 
+}
+
+.footerContainer .footerContent div:last-child {
+    margin-right: 0; 
+}
+
+.footerContainer .mini-cart-bottom { 
+    width: 100%; 
+}
+
+
+.footerContainer .iconContainer { 
+    width: 800px; 
+    display: flex;
+    justify-content: space-between; 
+}
+
+.footerContainer .icons { 
+    font-size: 30px; 
+    display: flex; 
+    gap: 10px; 
+}
+
 
 }
 
@@ -2839,7 +2953,7 @@ html[dir="rtl"] .navbar-container > div a {
 
 html[dir="rtl"] .cart-item-qty {
   right: auto;
-  left: -8px;
+  left: -18px;
 }
 
 
@@ -2857,6 +2971,7 @@ html[dir="rtl"] .navitems {
   flex-direction: row; 
   justify-content: flex-end;   
   direction: rtl; 
+  padding-left: 35%;;
 }
 
 /* LTR */

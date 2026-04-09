@@ -36,15 +36,14 @@ return (
         <span className="heading">
             Your Cart contains {totalQuantities} item{totalQuantities > 1 || totalQuantities === 0 ? "s" : ""}
         </span>
+        
         {cartItems.length < 1 && (
-            <EmptyCart>
-                <Link href="/shop">
+            <EmptyCart />
+                /*<Link href="/shop">
                     <button type="button" className="btn">
                         Go to Shop
                     </button>
-                </Link>    
-            </EmptyCart>
-            
+                </Link>*/   
         )}
 
         <div className="product-container">
@@ -76,11 +75,12 @@ return (
                         Subtotal: جنيه مصرى
                         {eUSLocale(totalPrice)}
                     </h3>
+                    {/*
                     <div className="btn-container">
                         <button type="button" className="btn" onClick={handleCheckout}>
                             Pay with Stripe
                         </button>
-                    </div>
+                    </div>*/}
                 </div>
             </div>
         )}
