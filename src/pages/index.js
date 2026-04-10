@@ -10,7 +10,7 @@ const Home = () => {
   const [mounted, setMounted] = useState(false);
 
   const images = [
-    '/images/image1.jpeg',
+    '/images/image00.jpg',
     '/images/image2.jpeg',
     '/images/image3.jpeg',
     '/images/image4.jpeg',

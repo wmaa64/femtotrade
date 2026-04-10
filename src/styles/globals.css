@@ -230,6 +230,13 @@ a {
   padding: 12px 0;
 }
 
+.navbar-header-part1 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+
 .navitems {
   width: 100%;
   display: flex;
@@ -2112,6 +2119,14 @@ table.additional-info>tbody>tr>th {
   color: blue;
   padding: 12px 0;
 }
+
+
+.navbar-header-part1 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 
   .navitems {
     width: 100%;

@@ -2,7 +2,7 @@ import React from "react";
 import Head from "next/head";
 import Header from "../components/Header"
 import NavBar  from "./NavBar";
-import DemoBanner from "./DemoBanner";
+
 import Footer from "./Footer/Footer";
 
 const Layout = ({ children }) => {
@@ -16,11 +16,11 @@ return (
         <title>شركة متخصصة فى  فرش القطط و الكلاب والحيوانات الاليفة فى مصر - فرش قطط اورجنال </title>
         <meta name="description" content="تسوق منتج المانى عالى الجودة - فرش القطط و الكلاب والحيوانات الاليفة فى مصر - اورجنال - 
     اكتيف ضد البول والروائح - 100% طبيعي - 100% قابل للتحلل - خالي من الغبار - طويل الأمد - مكافحة الروائح - سهل التنظيف!" />        
-        <link rel="apple-touch-icon" sizes="180x180" href="/favicon/img4.jpeg" />
-        <link rel="icon" type="image/jpeg" sizes="32x32" href="/favicon/img4.jpeg" />
-        <link rel="icon" type="image/jpeg" sizes="16x16" href="/favicon/img4.jpeg" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/favicon/img42.jpeg" />
+        <link rel="icon" type="image/jpeg" sizes="32x32" href="/favicon/img42.jpeg" />
+        <link rel="icon" type="image/jpeg" sizes="16x16" href="/favicon/img42.jpeg" />
         <link rel="manifest" href="/site.webmanifest" />
-        <link rel="mask-icon" href="/favicon/img4.jpeg" color="#5bbad5" />
+        <link rel="mask-icon" href="/favicon/img42.jpeg" color="#5bbad5" />
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff" />
     </Head>

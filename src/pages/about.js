@@ -29,7 +29,7 @@ const About = () => {
       {isRTL ? (
         <>
           <h1>من نحن</h1>
-        <p>متخصصة فى رمل الحيوانات الأليفة بالمنزل</p>
+        <p>نحن شركة متخصصة فى رمل الحيوانات الأليفة بالمنزل</p>
         <p>
              تتميز منتجاتنا بالميزات التالية:
 
@@ -54,7 +54,7 @@ const About = () => {
       ) : (
         <>
           <h1>About Us</h1>
-        <p>Specialized in  Organic Litter for home animals</p>
+        <p>We are a specialized company in Organic Litter for home animals</p>
         <p>
             Our products has these Features:
             Cat's Best - Organic Litter - Smart Pellets - Prevent Tracking
