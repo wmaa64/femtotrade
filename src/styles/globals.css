@@ -235,7 +235,6 @@ a {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 3px;
 }
 
 
@@ -2126,7 +2125,6 @@ table.additional-info>tbody>tr>th {
 .navbar-header-part1 {
   display: flex;
   align-items: center;
-  gap: 4px;
 }
 
   .navitems {
