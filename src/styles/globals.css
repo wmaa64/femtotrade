@@ -206,7 +206,7 @@ a {
 }
 
 .navbar-container> div h1 {
-  font-size: clamp(20px, 10vw, 25px);
+  font-size: clamp(18px, 10vw, 20px);
 }
 
 .navbar-container>div>a {
@@ -2095,7 +2095,7 @@ table.additional-info>tbody>tr>th {
   }
 
   .navbar-container> div h1 {
-    font-size: clamp(39px, 10vw, 40px);
+    font-size: clamp(30px, 10vw, 35px);
   }
 
   .navbar-container>div>a {
@@ -2125,9 +2125,8 @@ table.additional-info>tbody>tr>th {
 .navbar-header-part1 {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 4px;
 }
-
 
   .navitems {
     width: 100%;
