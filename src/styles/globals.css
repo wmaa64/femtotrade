@@ -206,7 +206,7 @@ a {
 }
 
 .navbar-container> div h1 {
-  font-size: clamp(39px, 10vw, 40px);
+  font-size: clamp(20px, 10vw, 25px);
 }
 
 .navbar-container>div>a {
@@ -228,6 +228,7 @@ a {
   justify-content: center;
   color: blue;
   padding: 12px 0;
+
 }
 
 .navbar-header-part1 {
