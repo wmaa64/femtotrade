@@ -17,7 +17,8 @@ const categorySchema = new mongoose.Schema({
 });
 
 const orderItemSchema = new mongoose.Schema({
-  productId: { type: mongoose.Schema.Types.ObjectId, ref: "Product" },
+  //productId: { type: mongoose.Schema.Types.ObjectId, ref: "Product" },
+  productId: { type: String }, // optional
   name: {
     en: { type: String, required: true },
     ar: { type: String, required: true },

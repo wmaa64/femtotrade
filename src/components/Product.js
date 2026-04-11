@@ -1,8 +1,7 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
-//import { urlFor } from "../../lib/client";
 import { NextSeo } from "next-seo";
-//import { useRouter } from "next/router";
+import i18n from "../i18n"
 
 const  toTitleCase = (str)=> {
     return str.replace(/\w\S*/g, function (txt) {
@@ -12,6 +11,17 @@ const  toTitleCase = (str)=> {
 
 const Product = ({ product }) => {
     const seoProductName = product.name.en  + " "  + product.name.ar || "Cat's Best - Dog's Best"; // Fallback if name is missing
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+        setMounted(true);
+    }, []);
+
+    if (!mounted) return null; // 🔥 prevents hydration error
+
+    const isRTL = i18n.language === "ar"; // true if Arabic
+
+
 return (
 <>
     <NextSeo
@@ -29,11 +39,11 @@ return (
                 <figure className="fliptile">
                     <img   src={product.image}    width={250}   height={250}  className="product-image"  />
                     <figcaption>
-                        <p className="product-name">{product.name.en}</p>
+                        <p className="product-name">{isRTL ? product.name.ar : product.name.en}</p>
                     </figcaption>
                 </figure>
 
-                <p className="product-name">{product.name.en}</p>
+                <p className="product-name">{isRTL ? product.name.ar : product.name.en}</p>
                 <p className="product-price">
                     جنيه مصرى
                     {product.price.toLocaleString("ar-EG", {
@@ -41,7 +51,7 @@ return (
                         minimumFractionDigits: 2,
                     })}
                 </p>
-                <p className="product-description">{product.description.ar}</p>
+                <p className="product-description">{isRTL ? product.description.ar : product.description.en}</p>
             </div>
         </Link>
     </div>

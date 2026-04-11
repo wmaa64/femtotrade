@@ -4,9 +4,12 @@ import { Product, Info, StarRating } from "../../components";
 import { useStateContext } from "../../../context/StateContext";
 import { useRouter } from "next/router";
 import { NextSeo } from "next-seo";
+import productsData from "../../../data/products";
+import i18n from '../../i18n';
 
 const toTitleCase = (str) =>
   str.replace(/\w\S*/g, (txt) => txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase());
+
 
 const ProductDetails = () => {
   const router = useRouter();
@@ -14,9 +17,34 @@ const ProductDetails = () => {
   const [product, setProduct] = useState(null);
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [mounted, setMounted] = useState(false);
 
   const { decQty, incQty, qty, onAdd, setShowCart, totalQuantities } = useStateContext();
 
+  useEffect(() => {
+        setMounted(true);
+    }, []);
+
+  useEffect(() => {
+    if (!id) return;   // Wait until router is ready
+
+    // ✅ get product by id
+    const foundProduct = productsData.find((p) => p._id === id);
+    setProduct(foundProduct);
+
+    // ✅ باقي المنتجات (exclude الحالي)
+    const relatedProducts = productsData.filter((p) => p._id !== id);
+    setProducts(relatedProducts);
+
+    setLoading(false);
+  }, [id]);
+
+  if (!mounted) return null; // 🔥 prevents hydration error
+
+  const isRTL = i18n.language === "ar"; // true if Arabic
+
+
+/*  
   useEffect(() => {
     if (!id) return; // Wait until router is ready
 
@@ -47,6 +75,7 @@ const ProductDetails = () => {
 
     fetchData();
   }, [id]);
+*/
 
   const handleBuyNow = () => {
     if (product) {
@@ -77,7 +106,7 @@ const ProductDetails = () => {
           </div>
 
           <div className="product-detail-desc">
-            <h1>{product.name.en}</h1>
+            <h1>{isRTL ? product.name.ar : product.name.en}</h1>
 
             <div className="reviews">
               <StarRating />
@@ -85,7 +114,7 @@ const ProductDetails = () => {
             </div>
 
             <h4>Details:</h4>
-            <p>{product.description.en}</p>
+            <p>{isRTL ? product.description.ar : product.description.en}</p>
 
             <p className="price">
               جنيه مصرى

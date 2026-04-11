@@ -717,7 +717,6 @@ a {
 .product-description {
   font-size: 14px;
   margin-top: 6px;
-  text-align: right;
   color:#000;
 }
 
@@ -2419,7 +2418,6 @@ table.additional-info>tbody>tr>th {
   margin-top: 6px;
   padding: 0 10px;
   color:#000;
-  text-align: right;
 }
 
 .product-price {
@@ -3060,6 +3058,11 @@ html[dir="rtl"] textarea {
 html[dir="rtl"] .product-description,
 html[dir="rtl"] .quantity-desc {
   text-align: right;
+}
+
+html[dir="ltr"] .product-description,
+html[dir="ltr"] .quantity-desc {
+  text-align: left;
 }
 
 /* Product detail container (images + description) */

@@ -3,6 +3,7 @@ import { NextSeo } from "next-seo";
 import ImageCarousel from '../components/ImageCarousel';
 import Product from '../components/Product';
 import i18n from '../i18n';
+import productsData from "../../data/products";
 
 const Home = () => {
   const [products, setProducts] = useState([]);
@@ -19,13 +20,20 @@ const Home = () => {
     '/images/image7.jpeg',
   ];
 
+
   useEffect(() => {
-      setMounted(true);
+    setMounted(true);
   }, []);
 
-    
+  useEffect(() => {
+    setProducts(productsData);
+    setLoading(false);
+  }, []);
+
+/*    
   // ✅ Fetch data client-side from API route
   useEffect(() => {
+  
     const fetchProducts = async () => {
       try {
         const res = await fetch("/api/products/featured");
@@ -42,7 +50,9 @@ const Home = () => {
     };
 
     fetchProducts();
+  
   }, []);
+*/
 
   if (!mounted) return null; // 🔥 prevents hydration error
 

@@ -41,6 +41,7 @@ const productSchema = new Schema({
   ],
 
   overprice: { type: Number, required: true },
+  oldprice: { type: Number, required: false },
 
   // Flags and timestamps
   featured: { type: Boolean, default: false },
