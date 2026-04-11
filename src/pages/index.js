@@ -68,21 +68,34 @@ return (
       <div className="perfect_message-ar">
           <p>لو عندك حيوانات اليفة بالمنزل 🐶 🐺 🐭   </p>
           <p>يبقى لازم تجرب المنتج اللألمانى الجديد 🌞 للراحة والامان</p>
-          <p>
+          <h2>
+            كاتس بيست هي علامة تجارية لرمل القطط مصنوعة من مواد خام خشبية ثانوية مستدامة حاصلة على شهادة PEFC.
+             يتميز هذا الرمل بأنه قابل للتحلل الحيوي، ويحتوي على ألياف نباتية نشطة تمتص سبعة أضعاف حجمها،
+              مما يجعله فعالاً واقتصادياً لقطتك وللبيئة على حد سواء.
+               إضافةً إلى ذلك، فهو مصنوع من مواد طبيعية متجددة، مما يوفر حلاً نظيفاً ومريحاً لاحتياجات قطتك في قضاء حاجتها.
+          </h2>
+          {/*<p>
             أفضل للقطط  والكلاب والحيوانات الاليفة -
             رمل عضوي - حبيبات ذكية - رمل عضوي يمنع التتبع - أصلي - فعال ضد البول والروائح -
             مضاد للبكتيريا بشكل طبيعي - قوة الطبيعة - راحة - غير متكتل وعالي الامتصاص - 
             عالمي - غير متكتل وعالي الامتصاص - أفضل للكلاب - ألياف عضوية طبيعية 100% -
             المكمل المثالي لإخراج الكلب لقضاء حاجته - راحة صديقة للكلاب على مدار الساعة
             - فائق الامتصاص - يوقف الروائح - قابل للتحلل الحيوي والتسميد بنسبة 100%.
-          </p>
+          </p>*/}
       </div>
 
     ) : (
       <div className="perfect_message">
           <p>Perfect for </p>
           <p>Cats, Dogs & Small Animals</p>
-          <p>
+          <h2>
+            Cat's Best is a brand of cat litter made from sustainable, PEFC certified secondary wood raw materials.
+            It is biodegradable and uses active plant fibers that absorb seven times their volume, 
+            making it efficient and economical for both your cat and the environment. 
+            Additionally, it is crafted from natural, renewable materials, providing a clean and comfortable solution
+            for your cat's bathroom needs.
+          </h2>
+          {/*<p>
               Cat's Best - Organic Litter - Smart Pellets - Prevent Tracking
               Organic Litter - Original - active against urine and odours
               Sensitive - Naturally Anti-bacterial
@@ -93,7 +106,8 @@ return (
               the ideal supplement to taking dog out to "do its business - 
               Dog freindly confort round the clock - super absorbent - 
               stops odeur - 100% biodegradable compostable.
-          </p>
+          </p>*/}
+
       </div>
     )}
 
