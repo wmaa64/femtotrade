@@ -28,7 +28,7 @@ return (
             <>
                 <div  className= "navbar-header-part1" >
                     <img src="/images/image00.jpg" alt="German Litter" className="logoimage" width={50} height={50} />
-                    <h1>الرمل الألمانى المعجزة </h1>
+                    <h1>الرمل الألمانى المعجزة - كاتس بست</h1>
                     <img src="/images/GermanFlag.jpg" alt="German Flag" className="logoimage" width={50} height={50} />
                 </div>
                 <h1>🦨 🦊 🐿️ 🐾  🐾 🐱 🐶 🐇</h1>
@@ -37,7 +37,7 @@ return (
             <>
                 <div className= "navbar-header-part1" >
                     <img src="/images/image00.jpg" alt="German Litter" className="logoimage" width={50} height={50} />
-                    <h1>The Miracle German Litter</h1>
+                    <h1>The Miracle German Litter - Cat's Best</h1>
                     <img src="/images/GermanFlag.jpg" alt="German Flag" className="logoimage" width={50} height={50} />
                 </div>
                 <h1>🦨 🦊 🐿️ 🐾  🐾 🐱 🐶 🐇</h1>
