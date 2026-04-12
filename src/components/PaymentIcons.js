@@ -38,6 +38,9 @@ const PaymentIcons = () => {
           <span style={{ color: "#caa34d" }} > +2 01005126629</span>
 
         </li>
+        <li className="payment-icon">
+          <span style={{ color: "blueviolet" }} >{isRTL? "عند الاستلام" : "On Delivery" }</span>
+        </li>
       </ul>
     </div>
   );
