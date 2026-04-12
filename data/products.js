@@ -11,8 +11,8 @@ const productsData = [
       ar: "كاتس بيست - قوة الطبيعة - راحة - لا يتكتل وذو امتصاص عالٍ"
     },
     image: "/images/img4.jpeg",
-    price: 450,
-    oldprice: 500,
+    price: 400,
+    oldprice: 449,
     featured: true,
     topselling: true,
   },
@@ -27,8 +27,8 @@ const productsData = [
       ar: "كاتس بيست - قوة الطبيعة - منتج عالمي - غير متكتل وعالي الامتصاص"
     },
     image: "/images/img5.jpeg",
-    price: 450,
-    oldprice: 500,
+    price: 400,
+    oldprice: 449,
     featured: true,
     topselling: false,
   },
@@ -43,8 +43,8 @@ const productsData = [
       ar: "أفضل ما لدى الكلاب - ألياف عضوية طبيعية 100% - المكمل المثالي لإخراج الكلب لقضاء حاجته - راحة مثالية للكلاب على مدار الساعة - امتصاص فائق - يمنع الروائح - قابل للتحلل الحيوي والتسميد بنسبة 100% "
     },
     image: "/images/img6.jpeg",
-    price: 450,
-    oldprice: 500,
+    price: 400,
+    oldprice: 449,
     featured: true,
     topselling: true,
   }
