@@ -2428,11 +2428,10 @@ table.additional-info>tbody>tr>th {
 
 .product-detail-container {
   display: flex;
-  grid-gap: 40px;
-  gap: 40px;
-  margin: 60px auto 0 auto;
+  width: 100%;
+  gap: 20px;
+  margin: 20px;
   color: #324d67;
-  width: 70%;
 }
 
 .product-detail-image {
@@ -3066,7 +3065,11 @@ html[dir="ltr"] .quantity-desc {
 
 /* Product detail container (images + description) */
 html[dir="rtl"] .product-detail-container {
-  flex-direction: row-reverse;
+  text-align: right;
+}
+
+html[dir="ltr"] .product-detail-container {
+  text-align: left;
 }
 
 /* Any inline margins or paddings that need swapping */
