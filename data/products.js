@@ -47,6 +47,22 @@ const productsData = [
     oldprice: 449,
     featured: true,
     topselling: true,
+  },
+  {
+    _id: "4",
+    name: {
+      en: "Allspan German Horse Super horse bedding 24 kg",
+      ar: "فرش خيول ألماني فاخر من Allspan، وزن 24 كجم"
+    },
+    description: {
+      en: "Allspan German Horse Super horse bedding 24 kg, High Absorption, Comfortable and Safe",
+      ar: "فرش خيول ألماني فاخر من Allspan، وزن 24 كجم، امتصاص قوى ، راحة وامان"
+    },
+    image: "/images/allspanHorseSuper24kg.jpg",
+    price: 750,
+    oldprice: 799,
+    featured: true,
+    topselling: true,
   }
 ];
 
