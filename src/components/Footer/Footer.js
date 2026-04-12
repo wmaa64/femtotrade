@@ -45,7 +45,7 @@ const Footer = () => {
                     <a href="https://www.facebook.com/share/1Nvayb9uW8" target="_blank" rel="noopener noreferrer">
                         <AiFillFacebook    size={30} color="#1877F2" /> {/* Facebook */}
                     </a>
-                    <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer">
+                    <a href="https://wa.me/+201005126629" target="_blank" rel="noopener noreferrer">
                         <AiOutlineWhatsApp size={30} color="#25D366" /> {/* WhatsApp */}
                     </a>
                 </div>
