@@ -93,7 +93,8 @@ const Header = () => {
         <div>
           <span className="phone-icon">{t("orderByPhone")}: 📞</span>
           <a href="tel:+2 01005126629" className="phone-number" >{t("phonenumber")} </a><br/>
-          
+          <span className="phone-icon">{t("orderByPhone")}: 📞</span>
+          <a href="tel:+2 01110124373" className='phone-number' >{t("phonenumber2")}</a><br/>
           <span className="phone-icon">{t("emailto")}: </span>
           {/*<MdEmail size={20} color="#d5272e" />*/}
           <a href="mailto:sales@femtotrade.com?subject=Inquiry&body=Hello" className="phone-number" >

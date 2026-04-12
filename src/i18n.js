@@ -21,6 +21,7 @@ const resources = {
         //Header
         "orderByPhone": "Order By Phone",
         "phonenumber": "+2 01005126629",
+        "phonenumber2": "+2 01110124373",
         "emailto": "Email Us",
         "welcome": "Welcome,",
         "guest": "Guest",
@@ -50,6 +51,7 @@ const resources = {
         //Header
         "orderByPhone": "طلب عبر الهاتف",
         "phonenumber": "+2 01005126629",
+        "phonenumber2": "+2 01110124373",
         "emailto": "أرسل بريدًا",
         "welcome": "مرحبًا،",
         "guest": "ضيف",
