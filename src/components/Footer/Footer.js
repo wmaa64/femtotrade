@@ -1,27 +1,34 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import Link from "next/link";
 import PaymentIcons from "../PaymentIcons";
 import i18n from "../../i18n";
-import { useTranslation } from "react-i18next";
 import MiniCart from "../MiniCart";
-
 import { useStateContext } from "../../../context/StateContext";
 import { AiFillInstagram, AiOutlineTwitter, AiFillFacebook, AiOutlineWhatsApp } from "react-icons/ai";
 
 const Footer = () => {
-  const { showCart } = useStateContext();
+    const { showCart } = useStateContext();
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+        setMounted(true);
+    }, []);
+
+    if (!mounted) return null; // 🔥 prevents hydration error
+
+    const isRTL = i18n.language === "ar"; // true if Arabic
 
   return (
     <>
-        <div className="footerContainer">
+        <div className="footerContainer" dir={isRTL ? "rtl" : "ltr"} >
             <div className="footerContent">
                 <div>
-                    <Link href="/delivery">Delivery</Link>
-                    <Link href="/privacy">Privacy</Link>
-                    <Link href="/terms">Terms and Conditions of Sale</Link>
-                    <Link href="/contact">Contact Us</Link>
+                    <Link href="/delivery">{isRTL? "التوصيل" : "Delivery"}</Link>
+                    <Link href="/privacy">{isRTL? "الخصوصية" : "Privacy"}</Link>
+                    <Link href="/terms">{isRTL? "شروط وقواعد البيع" : "Terms and Conditions of Sale"}</Link>
+                    <Link href="/contact">{isRTL? "التواصل معنا" : "Contact Us"}</Link>
                 </div>
-                <div>Contact: sales@femtotrade.com</div>
+                <div>{isRTL?  "التواصل sales@femtotrade.com: " : "Contact: sales@femtotrade.com"}</div>
 
                 <MiniCart />
             </div>
@@ -44,7 +51,7 @@ const Footer = () => {
                 </div>
             </div>
         </div>
-        <p className="copyright">2026 Femtotrade.shop All rights reserved</p>
+        <p className="copyright">{isRTL? "2006 جميع الحقوق محفوظة لـ فمتوتريد.شوب " : "2026 Femtotrade.shop All rights reserved"}</p>
     </>
   );
 };

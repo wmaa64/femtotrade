@@ -1,13 +1,24 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import Image from "next/image";
+import i18n from "../i18n"
 
 const PaymentIcons = () => {
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+        setMounted(true);
+    }, []);
+
+    if (!mounted) return null; // 🔥 prevents hydration error
+
+    const isRTL = i18n.language === "ar"; // true if Arabic
+
   return (
     <div className="payment-icons">
-      <span className="visually-hidden">Payment methods</span>
+      <span className="visually-hidden">{isRTL? "طرق الدفع" : "Payment Methods" }</span>
       <ul className="payment-icons list--inline site-footer__icon-list">
         <li className="payment-icon ">
-          <span style={{ color: "#caa34d" }} >Instapay: </span>
+          <span style={{ color: "#caa34d" }} >{isRTL? "انستابى: " : "Instapay: " }</span>
           <Image
             src="/images/instapay.jpg"   // put the logo in public folder
             alt="Instapay"
@@ -17,10 +28,10 @@ const PaymentIcons = () => {
           <span style={{ color: "#caa34d" }} > +2 01005126629</span>
         </li>
         <li className="payment-icon">
-          <span style={{ color: "#caa34d" }} >Vodafone Cash: </span>
+          <span style={{ color: "#caa34d" }} >{isRTL? "فودافون كاش: " : "Vodafone Cash: " }</span>
           <Image
             src="/images/VodafoneCash.jpg"   // put the logo in public folder
-            alt="Instapay"
+            alt="VodafoneCash"
             width={40}
             height={40}
           />
