@@ -9,10 +9,11 @@ import { useTranslation } from "react-i18next";
 import { StateContext } from "../../context/StateContext";
 import { DefaultSeo } from "next-seo";
 import SEO from "../../next-seo.config";
-
+import { useRouter } from "next/router";
 
 function MyApp({ Component, pageProps }) {
   const { i18n } = useTranslation();
+  const router = useRouter();
   
   useEffect(() => {
     const dir = i18n.language === "ar" ? "rtl" : "ltr";
@@ -22,8 +23,38 @@ function MyApp({ Component, pageProps }) {
 
   }, [i18n.language]);
 
+  useEffect(() => {
+    const handleRouteChange = (url) => {
+      window.gtag("config", "G-J6GMZBLK8J", {
+        page_path: url,
+      });
+    };
+
+    router.events.on("routeChangeComplete", handleRouteChange);
+    return () => {
+      router.events.off("routeChangeComplete", handleRouteChange);
+    };
+  }, [router.events]);
+
+
 return (
   <>
+      {/* ✅ Google Analytics */}
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-J6GMZBLK8J"
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-J6GMZBLK8J', {
+            page_path: window.location.pathname,
+          });
+        `}
+      </Script>
+
     <DefaultSeo
       {...SEO}
         title="Pets Suppliers | Cat's Best | Femtotrade | فرش القطط و الكلاب والحيوانات الاليفة فى مصر"
@@ -51,7 +82,7 @@ return (
         <Component {...pageProps} />
       </Layout>
     </StateContext>
-  </>
+</>
 
 );
 }
