@@ -10,6 +10,7 @@ import { StateContext } from "../../context/StateContext";
 import { DefaultSeo } from "next-seo";
 import SEO from "../../next-seo.config";
 import { useRouter } from "next/router";
+import Script from "next/script";
 
 function MyApp({ Component, pageProps }) {
   const { i18n } = useTranslation();
