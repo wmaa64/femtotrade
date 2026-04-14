@@ -1,6 +1,8 @@
 module.exports = {
   siteUrl: 'https://femtotrade.shop',
   generateRobotsTxt: true,
+  changefreq: 'daily',
+  priority: 0.7,
   exclude: [
     '/contact',
     'canceled',
@@ -11,8 +13,27 @@ module.exports = {
     '/shop',
     '/success',
     '/terms',
-    '/users/*',
-  ],
-  changefreq: 'daily',
-  priority: 0.7,
+    '/users/*'
+  ]
+  
+  ,robotsTxtOptions: {
+    policies: [
+      {
+        userAgent: '*',
+        allow: '/',
+        disallow: [
+            '/contact',
+            'canceled',
+            '/delivery',
+            '/orders/manage',
+            '/privacy',
+            '/products/manage',
+            '/shop',
+            '/success',
+            '/terms',
+            '/users/*'
+        ],
+      },
+    ],
+  },
 }
