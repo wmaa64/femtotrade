@@ -61,12 +61,11 @@ const Home = () => {
 return (
 <>
   <NextSeo
-    title="Pets Suppliers | Cat's Best | Femtotrade | فرش القطط و الكلاب والحيوانات الاليفة فى مصر"
-    description="Pet Suppliers in Egypt - Cat's Best - Original litter - Active against urine and odours 
-    - 100% natural - 100% biodegradable - Dust-free - Long-lasting - Odour control - Easy to clean
-    - فرش القطط و الكلاب والحيوانات الاليفة فى مصر - فرش قطط اورجنال - 
-    فرش قطط اكتيف ضد البول والروائح - فرش قطط 100% طبيعي - فرش قطط 100% قابل للتحلل -
-     فرش قطط خالي من الغبار - فرش قطط طويل الأمد - فرش قطط مكافحة الروائح - فرش قطط سهل التنظيف"
+    title="The Miracle German Litter - Cat's Best - الرمل الألمانى المعجزة - كاتس بست"
+    description="Cat's Best is a brand of cat litter made from sustainable, 
+                  PEFC certified secondary wood raw materials. It is biodegradable - 
+                  كاتس بيست هي علامة تجارية لرمل القطط مصنوعة من مواد خام خشبية ثانوية مستدامة حاصلة على شهادة PEFC.
+                   وهي قابلة للتحلل الحيوي."
   />
 
   <div className="section_container" dir={isRTL ? "rtl" : "ltr"}>

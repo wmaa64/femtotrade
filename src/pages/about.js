@@ -18,12 +18,14 @@ const About = () => {
   return (
     <>
     <NextSeo
-    title="Pets Suppliers | Cat's Best | Femtotrade | فرش القطط و الكلاب والحيوانات الاليفة فى مصر"
-    description="Pet Suppliers in Egypt - Cat's Best - Original litter - Active against urine and odours 
-    - 100% natural - 100% biodegradable - Dust-free - Long-lasting - Odour control - Easy to clean
-    - فرش القطط و الكلاب والحيوانات الاليفة فى مصر - فرش قطط اورجنال - 
-    فرش قطط اكتيف ضد البول والروائح - فرش قطط 100% طبيعي - فرش قطط 100% قابل للتحلل -
-     فرش قطط خالي من الغبار - فرش قطط طويل الأمد - فرش قطط مكافحة الروائح - فرش قطط سهل التنظيف"
+    title="Cat's Best - Organic Litter - Smart Pellets - Prevent Tracking Organic Litter - كاتس بيست - رمل عضوي - حبيبات ذكية
+                   - رمل عضوي يمنع التتبع"
+    description="Cat's Best - Organic Litter - Smart Pellets - Prevent Tracking Organic Litter - Original - 
+                  active against urine and odours Sensitive - Naturally Anti-bacterial The Power of Nature - 
+                  Confort - Non Clumping & High ABsorption Universal.
+                  كاتس بيست - رمل عضوي - حبيبات ذكية
+                   - رمل عضوي يمنع التتبع - أصلي - فعال ضد البول والروائح - مضاد للبكتيريا طبيعيًا - قوة الطبيعة -
+                   مريح - غير متكتل وعالي الامتصاص - مناسب لجميع أنواع القطط"
     />
     <div className="about-us">
       {isRTL ? (

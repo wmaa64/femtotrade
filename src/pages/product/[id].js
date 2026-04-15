@@ -89,12 +89,8 @@ const ProductDetails = () => {
 
   return (
     <>
-      <NextSeo title={`${toTitleCase(product.name.en)} - فرش القطط و الكلاب والحيوانات الاليفة فى مصر منتج المانى اصلى `} 
-      description="Pet Suppliers in Egypt - Cat's Best - Original litter - Active against urine and odours 
-    - 100% natural - 100% biodegradable - Dust-free - Long-lasting - Odour control - Easy to clean
-    - فرش القطط و الكلاب والحيوانات الاليفة فى مصر - فرش قطط اورجنال - 
-    فرش قطط اكتيف ضد البول والروائح - فرش قطط 100% طبيعي - فرش قطط 100% قابل للتحلل -
-     فرش قطط خالي من الغبار - فرش قطط طويل الأمد - فرش قطط مكافحة الروائح - فرش قطط سهل التنظيف" 
+      <NextSeo title={`${toTitleCase(product.name.en)} - ${product.name.ar} `} 
+      description={`${toTitleCase(product.description.en)} - ${product.description.ar}`}
       />
 
       <div>
