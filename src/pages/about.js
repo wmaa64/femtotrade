@@ -18,14 +18,10 @@ const About = () => {
   return (
     <>
     <NextSeo
-    title="Cat's Best - Organic Litter - Smart Pellets - Prevent Tracking Organic Litter - كاتس بيست - رمل عضوي - حبيبات ذكية
-                   - رمل عضوي يمنع التتبع"
-    description="Cat's Best - Organic Litter - Smart Pellets - Prevent Tracking Organic Litter - Original - 
-                  active against urine and odours Sensitive - Naturally Anti-bacterial The Power of Nature - 
-                  Confort - Non Clumping & High ABsorption Universal.
-                  كاتس بيست - رمل عضوي - حبيبات ذكية
-                   - رمل عضوي يمنع التتبع - أصلي - فعال ضد البول والروائح - مضاد للبكتيريا طبيعيًا - قوة الطبيعة -
-                   مريح - غير متكتل وعالي الامتصاص - مناسب لجميع أنواع القطط"
+    title="Cat's Best - Organic Litter - Smart Pellets - Prevent Tracking Organic Litter "
+    description="كاتس بيست - رمل عضوي - حبيبات ذكية - رمل عضوي يمنع التتبع - أصلي -
+     فعال ضد البول والروائح - مضاد للبكتيريا طبيعيًا - قوة الطبيعة - مريح - 
+     غير متكتل وعالي الامتصاص - مناسب لجميع أنواع القطط"
     />
     <div className="about-us">
       {isRTL ? (
